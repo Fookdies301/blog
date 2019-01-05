@@ -10,7 +10,7 @@
     
     
     
-    <title>Hello World | Point</title>
+    <title>Markdown + R | Point</title>
     <link href="”https://Fookdies301.github.io/blog“" rel="”prefetch”">
 
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -206,19 +206,26 @@
         <i class="fa fa-home"></i>
         <a href="https://Fookdies301.github.io/blog">Point</a>
         >
-        <span>Hello World</span>
+        <span>Markdown + R</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                <a href="/blog/2019/01/05/f5780708/">Markdown + R</a>
             </h1>
         </div>
         <div class="tag-article">
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2019-01-02
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/Markdown-R/">Markdown + R</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-01-05
             </span>
             
         </div>
@@ -228,28 +235,106 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                    <a href="/blog/2019/01/05/f5780708/">Markdown + R</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2019-01-02
+                <i class="fa fa-calendar"></i> 2019-01-05
             </p>
             <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/Markdown-R/">Markdown + R</a>
+                
                 
                 
             </p>
         </center>
     </div>
     <div class="content-article">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="Markdown-R"><a href="#Markdown-R" class="headerlink" title="Markdown + R"></a>Markdown + R</h1><p>来源：<a href="http://www.yangzhiping.com/tech/r-markdown-knitr.html" target="_blank" rel="noopener">Markdown写作浅谈</a></p>
+<h2 id="科技写作与Markdown-R"><a href="#科技写作与Markdown-R" class="headerlink" title="科技写作与Markdown+R"></a>科技写作与Markdown+R</h2><h3 id="科技写作会碰到什么难题？"><a href="#科技写作会碰到什么难题？" class="headerlink" title="科技写作会碰到什么难题？"></a>科技写作会碰到什么难题？</h3><p>如果你是纯文科生，写的都是豆瓣小酸文或者诗歌之类的，那么，看完上面这一部分就可以打住了。如果你还有写科技论文的需要，则继续往下看。</p>
+<p>科技写作与文艺写作的不同主要有：</p>
+<ul>
+<li>公式与图表：相信各位写过科学论文的，都会为数学公式与各类图表的输出头疼不已；</li>
+<li>格式转换：pdf是通用的，但是有时偏偏需要LaTeX原始格式或者Word原始格式；</li>
+<li>参考文献：投稿给不同刊物，往往参考文献要根据对方的格式来调整。</li>
+</ul>
+<p>解决这些难题，<a href="http://en.wikipedia.org/wiki/LaTeX" target="_blank" rel="noopener">LaTeX</a>是国际科学界，尤其是偏数理类的学科的主流方案之一。当然，因为中国盗版office的流行，导致国内科技论文Word更盛行，则是另一码事。Word因为近些年在参考文献协作软件、数学公式方面的发力，也逐步成为科技界认同的论文投递标准之一。</p>
+<p>提到LaTeX的人们，常常有两种口气。一种是当做大神来敬仰的，当语言、软件变为传奇，路人皆知它的诞生历史时，于是，众多如你我这类文科生，只有抬头仰望的份了。另一类，则是不屑的口气，LaTeX那么好学，你怎么都学不会！国际期刊都是用这个写的，你别混了。。。</p>
+<p>于是，我等文科生只好在被鄙视的眼光之下，快快走过LaTeX。。。但是，LaTeX真的符合人们写作习惯吗？请记住当时的历史。那时的计算机，所见即所得，并不像今天这么流行。那时的计算机，处理能力也不像今天这么强大。更别提什么脚本语言了。翻出上一份LaTeX文档所用的APA模版，大家就知道它有多么坑爹了。。。</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/p220903450-4.jpg" alt=""></p>
+<p>使用Lyx，好看多了。问题是，它有坑吗？你跳过吗？</p>
+<h2 id="Markdown-R如何解决的？"><a href="#Markdown-R如何解决的？" class="headerlink" title="Markdown+R如何解决的？"></a>Markdown+R如何解决的？</h2><p>每位试图解决LaTeX的不便，又试图保留它的优点的人们，都走上了一条不归路。</p>
+<p>直到有一天，极其熟悉LaTeX，也熟悉Markdown的yihui同学，意识到了，LaTeX它可以作为最终格式生成。但是，我们中间的写作过程，完全可以用Markdown这么简单明了的语法来写，我们真正需要的，就是一堆数学公式、图表与参考文献而已。前2者，恰恰是R的强项。后者，则留给开源社区，下一步解决。（可参考<a href="http://johnmacfarlane.net/pandoc/README.html#reference-links" target="_blank" rel="noopener">线索1</a>、<a href="https://github.com/inukshuk/citeproc-ruby" target="_blank" rel="noopener">线索2</a>、<a href="https://github.com/inukshuk/jekyll-scholar" target="_blank" rel="noopener">线索 3</a> )</p>
+<p>于是，在他的新作R包<a href="http://yihui.name/knitr/" target="_blank" rel="noopener">knitr</a>中，果断提供了Markdown支持。并说服R社区主流编辑器厂家，开源软件<a href="http://www.rstudio.com/" target="_blank" rel="noopener">RStudio</a> 提供 Markdown支持，从而使得Rmd这种新格式开始流行。我们有幸看到这个重要格式的诞生，国人的贡献如此重要。</p>
+<h2 id="Rmd-简介"><a href="#Rmd-简介" class="headerlink" title="Rmd 简介"></a>Rmd 简介</h2><p>Rmd 格式更详细的描述，读 yihui 的文档：<a href="https://github.com/yihui/r-ninja/blob/master/11-auto-report.md" target="_blank" rel="noopener">自动化报告</a></p>
+<p>在这里，让我简单说明，如何最快上手Rmd格式。</p>
+<h3 id="安装并配置RStudio"><a href="#安装并配置RStudio" class="headerlink" title="安装并配置RStudio"></a>安装并配置RStudio</h3><p>下载 <a href="http://rstudio.org/" target="_blank" rel="noopener">RStudio</a> 之后，打开配置选项，如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/p220903450-5.jpg" alt=""></p>
+<p>然后，进行如下配置：</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/p220903450-7.jpg" alt=""></p>
+<h3 id="新建Rmd文档"><a href="#新建Rmd文档" class="headerlink" title="新建Rmd文档"></a>新建Rmd文档</h3><p>新建一个Rmd文档，如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/rmarkdown.jpg" alt=""></p>
+<p>然后，默认会出来一些内容。如果你对Markdown语法有不熟悉的地方，点击MD按钮。写完之后，直接点击： <strong>Knit HTML</strong> 按钮即可发布。MD按钮与Knit Html按钮的位置如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/md.jpg" alt=""></p>
+<p>就会预览成功。你也可以点击保存，生成相应的图片、Markdown文档。</p>
+<p>是的，你要的一切图片都有了！这就是 yihui 所推崇的 文学性编程、<a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/UseR-2012/InvitedXieAllaire.pdf" target="_blank" rel="noopener">可重复研究</a>概念的神奇。</p>
+<p>更重要的是，还保留了对LaTeX的无缝兼容。比如，大家可以敲下这段文字：</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/5-1.png" alt=""></p>
+<p>其中，这一段，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$latex</span><br><span class="line">f(x;\mu,\sigma^2) = \frac&#123;1&#125;&#123;\sigma\sqrt&#123;2\pi&#125;&#125; e^&#123; -\frac&#123;1&#125;&#123;2&#125;\left(\frac&#123;x-\mu&#125;&#123;\sigma&#125;\right)^2 &#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>就是直接生成LaTeX格式的数学公式！</p>
+<p>没有安装RStudio，或者不熟悉R的朋友，可以在我搭建的一个在线演示APP里面，将上述代码，粘贴上去，然后看看神奇的效果！</p>
+<p>网址是：<a href="http://r.psyapp.com/apps/markdown/" target="_blank" rel="noopener">R Markdown App</a> 效果如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/p220903450-9.jpg" alt=""></p>
+<h2 id="这么做，有什么好处呢？"><a href="#这么做，有什么好处呢？" class="headerlink" title="这么做，有什么好处呢？"></a>这么做，有什么好处呢？</h2><p>让我细数一下：</p>
+<h3 id="真正意义上的可重复性研究"><a href="#真正意义上的可重复性研究" class="headerlink" title="真正意义上的可重复性研究"></a>真正意义上的可重复性研究</h3><p>发表论文或者审核同事的报告，有个最麻烦的事情，你不知道他的步骤或者计算是否有误。现在，代码嵌在报告正文中，或者附录在报告末尾。而你，要做的，仅仅是一键生成。。。 这就是真正意义上的可重复性研究！</p>
+<h3 id="更强大的数学与制图能力"><a href="#更强大的数学与制图能力" class="headerlink" title="更强大的数学与制图能力"></a>更强大的数学与制图能力</h3><p>既兼容了LaTeX的既有能力，同时，又广泛借助于R自身强大的作图与统计学习能力。</p>
+<p>更重要的是，未来，并不是非要用R语言作图。yihui 同学在前文中的描述已经极其清楚了。</p>
+<h3 id="当然，还有云计算"><a href="#当然，还有云计算" class="headerlink" title="当然，还有云计算"></a>当然，还有云计算</h3><p>真正意义上的云计算，尤其是类似于我们这样，中小企业、小型实验室实战使用的小型云计算，不同于各类忽悠的云计算。Markdown+R这种方式是最佳方式之一。上述例子中提到的那个APP，就是搭建在云中。同时提供各类REST接口，可以被Ruby程序调用。</p>
+<h2 id="Markdown格式与LaTeX、Word等格式的互转"><a href="#Markdown格式与LaTeX、Word等格式的互转" class="headerlink" title="Markdown格式与LaTeX、Word等格式的互转"></a>Markdown格式与LaTeX、Word等格式的互转</h2><p>点这里：<a href="http://johnmacfarlane.net/pandoc/" target="_blank" rel="noopener">Pandoc</a></p>
+<p>还有不少有趣的玩法，如<a href="https://gist.github.com/2955183" target="_blank" rel="noopener">Building a beamer presentation with knitr</a>.</p>
+<h2 id="如何学习Markdown-R？"><a href="#如何学习Markdown-R？" class="headerlink" title="如何学习Markdown+R？"></a>如何学习Markdown+R？</h2><p>好了，回到大家最关心的部分。分成两部分，先是如何学习Markdown，其次是如何学习R。</p>
+<h3 id="Markdown格式说明"><a href="#Markdown格式说明" class="headerlink" title="Markdown格式说明"></a>Markdown格式说明</h3><ul>
+<li>参考：<a href="http://markdown.tw/" target="_blank" rel="noopener">Markdown</a></li>
+<li>更好的学习办法是直接读各类范本文件</li>
+<li>更多资源参考<a href="http://v2ex.com/go/markdown" target="_blank" rel="noopener">V2ex节点</a></li>
+</ul>
+<h3 id="Markdown编辑器"><a href="#Markdown编辑器" class="headerlink" title="Markdown编辑器"></a>Markdown编辑器</h3><ul>
+<li>Mac等平台下推荐<a href="http://mouapp.com/" target="_blank" rel="noopener">Mou</a></li>
+<li>Windows平台推荐<a href="http://markdownpad.com/" target="_blank" rel="noopener">MarkdownPad</a><br>RStudio可作为写作科技论文与R语言编辑器选择，它是跨平台的</li>
+<li><a href="https://github.com/adam-p/markdown-here" target="_blank" rel="noopener">markdown-here</a>借助Chrome插件，将gmai写作窗口变为Markdown在线写作窗口</li>
+<li>可以直接在线通过github撰写与提交Markdown文件，github有自动的版本跟踪功能，不用担心写废与找不到以前写的</li>
+</ul>
+<h2 id="Windows下的GitHub特别说明"><a href="#Windows下的GitHub特别说明" class="headerlink" title="Windows下的GitHub特别说明"></a>Windows下的GitHub特别说明</h2><ul>
+<li>如果碰到git、github等与windows不兼容的现象，不建议折腾，而是直接在线提交即可。</li>
+<li>GitHub最近发行了Windows版本，下载地址<a href="https://github.com/blog/1127-github-for-windows" target="_blank" rel="noopener">在这里</a></li>
+<li>我的老文：<a href="http://www.yangzhiping.com/tech/github.html" target="_blank" rel="noopener">如何高效利用github</a></li>
+</ul>
+<h2 id="如何学习R"><a href="#如何学习R" class="headerlink" title="如何学习R"></a>如何学习R</h2><h3 id="Rstudio"><a href="#Rstudio" class="headerlink" title="Rstudio"></a>Rstudio</h3><ul>
+<li>Getting_Started_with_RStudio.pdf</li>
+</ul>
+<h3 id="R语言入门读物"><a href="#R语言入门读物" class="headerlink" title="R语言入门读物"></a>R语言入门读物</h3><ul>
+<li>R for SAS and SPSS Users.pdf ： 适合有SPSS基础的朋友</li>
+<li>Analysis of Questionnaire Data with R ： 适合处理问卷数据的文科生或社会科学类</li>
+<li>更多参考我的豆列：<a href="http://book.douban.com/doulist/1222833/" target="_blank" rel="noopener">技术派心理学</a></li>
+</ul>
+<h2 id="示范"><a href="#示范" class="headerlink" title="示范"></a>示范</h2><h3 id="文艺青年"><a href="#文艺青年" class="headerlink" title="文艺青年"></a>文艺青年</h3><p>文艺青年看这里，</p>
+<ul>
+<li><a href="http://www.douban.com/note/221187015/" target="_blank" rel="noopener">為什麼文科生也該用markdown寫作?</a></li>
+<li><a href="http://jianshu.io/p/qqGjLN" target="_blank" rel="noopener">为什么作家应该用 Markdown 保存自己的文稿</a></li>
+</ul>
+<h3 id="科学青年"><a href="#科学青年" class="headerlink" title="科学青年"></a>科学青年</h3><p>可以看这里：<a href="https://github.com/ouyangzhiping/openscience/blob/master/README.md" target="_blank" rel="noopener">如何学习科学：开放科学工具箱</a></p>
+<p>点击 RAW 即可看到原始格式。这是一个长文档的示范。另一个示范是作者写的一个在线DEMO：</p>
+<p><a href="http://r.psyapp.com/apps/markdown/" target="_blank" rel="noopener">云中的社会网络分析+Markdown</a></p>
+<p>以及：<a href="http://panda0411.com/2012/06/22/markdownr%E7%A7%91%E6%8A%80%E6%96%87%E5%86%99%E4%BD%9C/" target="_blank" rel="noopener">Markdown+R科技文写作</a></p>
+<h3 id="技术青年"><a href="#技术青年" class="headerlink" title="技术青年"></a>技术青年</h3><ul>
+<li><a href="http://yihui.name/knitr/" target="_blank" rel="noopener">knitr</a>以及各类Google、维基百科。</li>
+<li>特别是：<a href="http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown" target="_blank" rel="noopener">pandoc-markdown</a></li>
+<li><a href="http://www.charlietanksley.net/philtex/primarily-pandoc/" target="_blank" rel="noopener">Primarily Pandoc: Writing in Markdown instead of LaTeX</a></li>
+</ul>
 
     </div>
 </article>
@@ -454,17 +539,17 @@
 
                 
                 <li>
-                    <a href="/blog/2019/01/02/4a17b156/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/blog/2019/01/05/f5780708/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/blog/2019/01/02/4a17b156/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/blog/2019/01/05/f5780708/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/blog/2019/01/02/4a17b156/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/blog/2019/01/05/f5780708/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -472,27 +557,27 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/blog/tags/git/" style="font-size: 19.130420155698427px;" class="tag-cloud-link">git</a>
+    <a href="/blog/tags/git/" style="font-size: 9.29847624409658px;" class="tag-cloud-link">git</a>
     
-    <a href="/blog/tags/命令/" style="font-size: 9.16917465258669px;" class="tag-cloud-link">命令</a>
+    <a href="/blog/tags/命令/" style="font-size: 19.82084669475307px;" class="tag-cloud-link">命令</a>
     
-    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 9.646771880117882px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
+    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 17.849017233373704px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
     
-    <a href="/blog/tags/环境变量/" style="font-size: 12.174397415186796px;" class="tag-cloud-link">环境变量</a>
+    <a href="/blog/tags/环境变量/" style="font-size: 8.996782212370167px;" class="tag-cloud-link">环境变量</a>
     
-    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 17.789976571358046px;" class="tag-cloud-link">Markdown+Pandoc</a>
+    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 11.724800230763675px;" class="tag-cloud-link">Markdown+Pandoc</a>
     
-    <a href="/blog/tags/引导/" style="font-size: 17.80688518818582px;" class="tag-cloud-link">引导</a>
+    <a href="/blog/tags/引导/" style="font-size: 17.760741114735463px;" class="tag-cloud-link">引导</a>
     
-    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 8.444721720745612px;" class="tag-cloud-link">MarkdownPad2安装</a>
+    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 11.401102150186556px;" class="tag-cloud-link">MarkdownPad2安装</a>
     
-    <a href="/blog/tags/Gitbook/" style="font-size: 11.550166150956322px;" class="tag-cloud-link">Gitbook</a>
+    <a href="/blog/tags/Gitbook/" style="font-size: 14.042051170836938px;" class="tag-cloud-link">Gitbook</a>
     
-    <a href="/blog/tags/Markdown/" style="font-size: 18.837920881935062px;" class="tag-cloud-link">Markdown</a>
+    <a href="/blog/tags/Markdown/" style="font-size: 10.121929249053458px;" class="tag-cloud-link">Markdown</a>
     
-    <a href="/blog/tags/Markdown-R/" style="font-size: 9.760463857861938px;" class="tag-cloud-link">Markdown + R</a>
+    <a href="/blog/tags/Markdown-R/" style="font-size: 19.23215548526742px;" class="tag-cloud-link">Markdown + R</a>
     
-    <a href="/blog/tags/Markdown语法/" style="font-size: 13.960305125310565px;" class="tag-cloud-link">Markdown语法</a>
+    <a href="/blog/tags/Markdown语法/" style="font-size: 11.76266658261422px;" class="tag-cloud-link">Markdown语法</a>
     
 </div>
                 

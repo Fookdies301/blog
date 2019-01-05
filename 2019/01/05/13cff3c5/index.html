@@ -10,7 +10,7 @@
     
     
     
-    <title>Hello World | Point</title>
+    <title>Markdown + Pandoc | Point</title>
     <link href="”https://Fookdies301.github.io/blog“" rel="”prefetch”">
 
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -206,19 +206,26 @@
         <i class="fa fa-home"></i>
         <a href="https://Fookdies301.github.io/blog">Point</a>
         >
-        <span>Hello World</span>
+        <span>Markdown + Pandoc</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                <a href="/blog/2019/01/05/13cff3c5/">Markdown + Pandoc</a>
             </h1>
         </div>
         <div class="tag-article">
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2019-01-02
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/Markdown-Pandoc/">Markdown+Pandoc</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-01-05
             </span>
             
         </div>
@@ -228,28 +235,45 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                    <a href="/blog/2019/01/05/13cff3c5/">Markdown + Pandoc</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2019-01-02
+                <i class="fa fa-calendar"></i> 2019-01-05
             </p>
             <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/Markdown-Pandoc/">Markdown+Pandoc</a>
+                
                 
                 
             </p>
         </center>
     </div>
     <div class="content-article">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="Markdown-Pandoc"><a href="#Markdown-Pandoc" class="headerlink" title="Markdown + Pandoc"></a>Markdown + Pandoc</h1><p>来源：<a href="http://blog.csdn.net/duqi_yc/article/details/8974041" target="_blank" rel="noopener">Markdown+Pandoc，打通写作界的任督二脉！</a></p>
+<p>Markdown+Pandoc，可以把自己的写作内容，变成世界上已有的任何格式的文件，包括很炫的slide，html5。没有人（或者我没看到）总结过这些内容，导致我走了很多弯路才最终打通任督二脉，特此纪念。</p>
+<p>了解Markdwon以后，我的写作世界，只有它；看到Pandoc格式转换以后，对生成的slide和pdf羡慕的不行。那时，自己期望以后的写作是这样的：首先用Markdown把自己的想法写下来；其次，通过Pandoc，把写好的Markdown文件，转换成Slide或者PDF。如此而已。</p>
+<p>Pandoc，这个不知道怎么发音，google也没找到。好吧，我就读做panda吧，谁让它是国宝。</p>
+<p>Pandoc的运行，是在命令行里面。可是，没那么简单，不是任何一个cmd都可以。你必须要下载Pandoc，请参考<a href="http://pandoc.org/installing.html" target="_blank" rel="noopener">这里</a>。根据自己的os，选择Windows 或者其他。</p>
+<p>安装以后，记得Pandoc的目录是啥，然后再到cmd里面去操作一些失传已久的doc命令，转换到pandoc的路径下。</p>
+<p>我个人习惯，是把要转换的文件，比如test.md，放到pandoc的路径下，这样在使用pandoc转换的时候，不用输入太多的路径（尤其是我们很多路径是中文，怕可能有一些问题）。当然，也可以调用其他路径的文件，只要自己觉得舒服。</p>
+<p>pandoc，就像linux下的iconv，可以把其他格式的文件，转化成自己想要的格式。具体的格式参考请看<a href="http://johnmacfarlane.net/pandoc/demos.html" target="_blank" rel="noopener">这里</a>。</p>
+<p>个人常用的有两个格式转换：</p>
+<ul>
+<li><p>a：md文件转换成html5</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pandoc -s --mathml -i -t dzslides test.md -o test.html</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>b：md文件转换成pdf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pandoc -t beamer test.md -o test.pdf</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这里强调一点，如果想转成PDF文件，要安装LATEX。推荐安装MiKTex。但是，中文转PDF，因latex支持中文差，转换有问题。对于Latex熟悉的人，可以参考这个，看是否能解决中文转slide pdf的问题。</p>
+<p>文件转换完成以后，如果有一些地方不合适，可以调整原始的md文件，再转换一次。等熟练以后，从写，到转换就非常迅速了。 当然，Pandoc还有很多的转换格式，大家可以自己去研究发觉。</p>
+<p>关于Pandoc的使用，我没有过多的去研究。只是把自己常用的几个功能熟悉了一下。时间，真的真的很宝贵，不知不觉就从指缝中溜走了。所以，我只能在满足自己需求情况下，去使用pandoc。</p>
+<p>期待大家更多的分享！</p>
 
     </div>
 </article>
@@ -454,17 +478,17 @@
 
                 
                 <li>
-                    <a href="/blog/2019/01/02/4a17b156/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/blog/2019/01/05/13cff3c5/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/blog/2019/01/02/4a17b156/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/blog/2019/01/05/13cff3c5/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/blog/2019/01/02/4a17b156/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/blog/2019/01/05/13cff3c5/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -472,27 +496,27 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/blog/tags/git/" style="font-size: 19.130420155698427px;" class="tag-cloud-link">git</a>
+    <a href="/blog/tags/git/" style="font-size: 10.013272009102494px;" class="tag-cloud-link">git</a>
     
-    <a href="/blog/tags/命令/" style="font-size: 9.16917465258669px;" class="tag-cloud-link">命令</a>
+    <a href="/blog/tags/命令/" style="font-size: 10.905184229822154px;" class="tag-cloud-link">命令</a>
     
-    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 9.646771880117882px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
+    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 14.141704441337275px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
     
-    <a href="/blog/tags/环境变量/" style="font-size: 12.174397415186796px;" class="tag-cloud-link">环境变量</a>
+    <a href="/blog/tags/环境变量/" style="font-size: 10.455162459070568px;" class="tag-cloud-link">环境变量</a>
     
-    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 17.789976571358046px;" class="tag-cloud-link">Markdown+Pandoc</a>
+    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 18.85333523608317px;" class="tag-cloud-link">Markdown+Pandoc</a>
     
-    <a href="/blog/tags/引导/" style="font-size: 17.80688518818582px;" class="tag-cloud-link">引导</a>
+    <a href="/blog/tags/引导/" style="font-size: 19.19510235728233px;" class="tag-cloud-link">引导</a>
     
-    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 8.444721720745612px;" class="tag-cloud-link">MarkdownPad2安装</a>
+    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 19.453410088903208px;" class="tag-cloud-link">MarkdownPad2安装</a>
     
-    <a href="/blog/tags/Gitbook/" style="font-size: 11.550166150956322px;" class="tag-cloud-link">Gitbook</a>
+    <a href="/blog/tags/Gitbook/" style="font-size: 11.967266891160861px;" class="tag-cloud-link">Gitbook</a>
     
-    <a href="/blog/tags/Markdown/" style="font-size: 18.837920881935062px;" class="tag-cloud-link">Markdown</a>
+    <a href="/blog/tags/Markdown/" style="font-size: 19.413894543998524px;" class="tag-cloud-link">Markdown</a>
     
-    <a href="/blog/tags/Markdown-R/" style="font-size: 9.760463857861938px;" class="tag-cloud-link">Markdown + R</a>
+    <a href="/blog/tags/Markdown-R/" style="font-size: 18.90294332046452px;" class="tag-cloud-link">Markdown + R</a>
     
-    <a href="/blog/tags/Markdown语法/" style="font-size: 13.960305125310565px;" class="tag-cloud-link">Markdown语法</a>
+    <a href="/blog/tags/Markdown语法/" style="font-size: 11.654086327053484px;" class="tag-cloud-link">Markdown语法</a>
     
 </div>
                 

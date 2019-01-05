@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="point">
+    
+    
+    
+    
+    
+    
+    <title>Markdown 基本语法 | Point</title>
+    <link href="”https://Fookdies301.github.io/blog“" rel="”prefetch”">
+
+    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+<link rel="stylesheet" href="/blog/css/aos.css">
+<link rel="stylesheet" href="/blog/css/style.css">
+    <script src="/blog/js/jquery.min.js"></script>
+    <script src="/blog/js/bootstrap.min.js"></script>
+    <script src="/blog/js/aos.js"></script>
+    <script src="/blog/js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="/blog/js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/blog/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/blog/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+</head></html>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="https://Fookdies301.github.io/blog" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/blog/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/blog/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/blog/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/blog/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse" aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://Fookdies301.github.io/blog">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">Point</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/blog/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/blog/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/blog/categories/git/">git</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/categories/hexo/">hexo</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/categories/Markdown/">Markdown</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/blog/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/blog/tags/git/">git</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/tags/命令/">命令</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/tags/MarkdownPad2在线报错/">MarkdownPad2在线报错</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/blog/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/blog/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://Fookdies301.github.io/blog">Point</a>
+        >
+        <span>Markdown 基本语法</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/blog/2019/01/05/7894e390/">Markdown 基本语法</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/Markdown语法/">Markdown语法</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-01-05
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/blog/2019/01/05/7894e390/">Markdown 基本语法</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-01-05
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/Markdown语法/">Markdown语法</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="Markdown-基本语法"><a href="#Markdown-基本语法" class="headerlink" title="Markdown 基本语法"></a>Markdown 基本语法</h1><h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><p>非常自然，一行文字就是一个段落。</p>
+<p>比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个段落。</span><br></pre></td></tr></table></figure>
+<p>会被解释成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>如果你需要另起一段，请在两个段落之间隔一个空行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是一个段落。</span><br><span class="line"></span><br><span class="line">这是另一个段落。</span><br></pre></td></tr></table></figure>
+<p>会解释成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落&lt;p&gt;</span><br><span class="line">&lt;p&gt;这是另一个段落&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>不隔一个空行的换行行为，在一些编辑器中被解释为换行，即插入一个<code>&lt;br /&gt;</code>标签。对与另外一些编辑器，会被解释为插入一个空格。对于后者，若要插入换行标签，请在当前一行的结尾打两个空格。</p>
+<h2 id="粗体、斜体"><a href="#粗体、斜体" class="headerlink" title="粗体、斜体"></a>粗体、斜体</h2><p>可以使用星号<code>*</code>或下划线<code>_</code>指定粗体或者斜体。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*这是斜体*</span><br><span class="line">_这也是斜体_</span><br><span class="line">**这是粗体**</span><br><span class="line">***这是粗体+斜体***</span><br></pre></td></tr></table></figure>
+<p>会被解释成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;em&gt;这是斜体&lt;/em&gt;</span><br><span class="line">&lt;em&gt;这也是斜体&lt;/em&gt;</span><br><span class="line">&lt;strong&gt;这是粗体&lt;/strong&gt;</span><br><span class="line">&lt;strong&gt;&lt;em&gt;这是粗体+斜体&lt;/strong&gt;&lt;/em&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>一部分编辑器支持删除线，它不是经典markdown中的要素。用波浪线<code>~</code>定义删除线。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~就像这样~~</span><br></pre></td></tr></table></figure>
+<p>会被解释成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;strike&gt;就像这样&lt;/strike&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>markdown总支持1~6六级标题，通过在一行之前加上不同数量的井号来表示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 这是 H1 #</span><br><span class="line"></span><br><span class="line">## 这是 H2 ##</span><br><span class="line"></span><br><span class="line">### 这是 H3 ###</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">###### 这是 H6 ######</span><br></pre></td></tr></table></figure>
+<p>行尾可以加上任意数量的井号字符，这些字符不会算作标题内容。通常会加上相等数量的字符以保持对称。</p>
+<p>此外，H1和H2也可以采用在文本下方添加底线来实现，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是 H1</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">这是 H2</span><br><span class="line">-------</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>通过在行首加上大于号<code>&gt;</code>来添加引用格式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span><br><span class="line">consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span><br><span class="line">Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line"></span><br><span class="line">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span><br><span class="line">id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure>
+<p>引用可以嵌套：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; This is the first level of quoting.</span><br><span class="line">&gt;</span><br><span class="line">&gt; &gt; This is nested blockquote.</span><br><span class="line">&gt;</span><br><span class="line">&gt; Back to the first level.</span><br></pre></td></tr></table></figure>
+<p>也可以嵌套其他格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; ## 这是一个标题。</span><br><span class="line">&gt;</span><br><span class="line">&gt; 1.   这是第一行列表项。</span><br><span class="line">&gt; 2.   这是第二行列表项。</span><br><span class="line">&gt;</span><br><span class="line">&gt; 给出一些例子代码：</span><br><span class="line">&gt;</span><br><span class="line">&gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);</span><br></pre></td></tr></table></figure>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>无序列表使用星号、加号或是减号作为列表标记：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*   Red</span><br><span class="line">*   Green</span><br><span class="line">*   Blue</span><br></pre></td></tr></table></figure>
+<p>等同于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+   Red</span><br><span class="line">+   Green</span><br><span class="line">+   Blue</span><br></pre></td></tr></table></figure>
+<p>和</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-   Red</span><br><span class="line">-   Green</span><br><span class="line">-   Blue</span><br></pre></td></tr></table></figure>
+<p>有序列表则使用数字接着一个英文句点：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  Bird</span><br><span class="line">2.  McHale</span><br><span class="line">3.  Parish</span><br></pre></td></tr></table></figure>
+<p>数字并不会影响输出的 HTML 结果，也就是说上面的例子等同于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  Bird</span><br><span class="line">1.  McHale</span><br><span class="line">1.  Parish</span><br></pre></td></tr></table></figure>
+<h2 id="内联代码"><a href="#内联代码" class="headerlink" title="内联代码"></a>内联代码</h2><p>用反引号<code>`</code>来标记内联代码，它们会解释成<code>&lt;code&gt;</code>标签。如果代码的内容中有反引号，请用两个反引号包裹。代码中的<code>&amp;</code>、<code>&lt;</code>、<code>&gt;</code>符号都会自动转义，请放心使用。</p>
+<h2 id="代码区域"><a href="#代码区域" class="headerlink" title="代码区域"></a>代码区域</h2><p>有两种方式标记代码区域，原生风格是行首缩进四个空格。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是一个普通段落：</span><br><span class="line"></span><br><span class="line">    这是一个代码区块。</span><br></pre></td></tr></table></figure>
+<p>会被解释成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是一个普通段落：&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;pre&gt;&lt;code&gt;这是一个代码区块。</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+<p>除了行首的4个空格会被移出，其它不变。像内联代码一样，上述三种符号也会被转义。但在代码段中，星号之类的markdown标记符号则不会解析。</p>
+<p>还有一种是github的风格，代码段的前后用三个反引号独占一行来标记。</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/2-1.png" alt=""></p>
+<p>目前主流编辑器都支持这种风格。</p>
+<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[an example](http://example.com/)</span><br><span class="line">[an example](http://example.com/ &quot;Optional Title&quot;)</span><br></pre></td></tr></table></figure>
+<p>会被解释为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&apos;http://example.com/&apos;&gt;an example&lt;/a&gt;</span><br><span class="line">&lt;a href=&apos;http://example.com/&apos; title=&quot;Optional Title&quot;&gt;an example&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>除了上面的行内式，也可以使用参考式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[an example][id]</span><br></pre></td></tr></table></figure>
+<p>然后在任意空白位置定义：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[id]: http://example.com/ &quot;Optional Title&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![Alt text](/path/to/img.jpg)</span><br><span class="line">![Alt text](/path/to/img.jpg &quot;Optional Title&quot;)</span><br></pre></td></tr></table></figure>
+<p>会被解释为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&apos;/path/to/img.jpg&apos; alt=&apos;Alt text&apos; /&gt;</span><br><span class="line">&lt;img src=&apos;/path/to/img.jpg&apos; alt=&apos;Alt text&apos; title=&apos;Optional Title&apos; /&gt;</span><br></pre></td></tr></table></figure>
+<p>同样，图像也有类似的参考式语法。</p>
+<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><p>如果链接的地址和名字重复，可以用尖括号语法将其简化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://example.com/&gt;</span><br></pre></td></tr></table></figure>
+<p>就相当于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[http://example.com/](http://example.com/)</span><br></pre></td></tr></table></figure>
+<p>切记，大多数编辑器都会自动将符合url规则的东西视为链接，并且解释成链接。很多时候作者由于疏忽等缘故，链接和后面的中文之间缺少空格，导致链接不正常。所以我建议，链接要么加上尖括号，要么两端加上空格。</p>
+<h2 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h2><p>markdown支持在以下字符前面插入反斜杠</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure>
+<p>插入之后，将不再解析这些字符，而是原样输出。</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>表格是github风格独有的语法，但近年来渐渐被大多数编辑器支持。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| Item     | Value | Qty   |</span><br><span class="line">| :------- | ----: | :---: |</span><br><span class="line">| Computer | $1600 |  5    |</span><br><span class="line">| Phone    | $12   |  12   |</span><br><span class="line">| Pipe     | $1    |  234  |</span><br></pre></td></tr></table></figure>
+<p>会被解释成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">&lt;thead&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">  &lt;th align=&quot;left&quot;&gt;Item&lt;/th&gt;</span><br><span class="line">  &lt;th align=&quot;right&quot;&gt;Value&lt;/th&gt;</span><br><span class="line">  &lt;th align=&quot;center&quot;&gt;Qty&lt;/th&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/thead&gt;</span><br><span class="line">&lt;tbody&gt;&lt;tr&gt;</span><br><span class="line">  &lt;td align=&quot;left&quot;&gt;Computer&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;right&quot;&gt;$1600&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;center&quot;&gt;5&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">  &lt;td align=&quot;left&quot;&gt;Phone&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;right&quot;&gt;$12&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;center&quot;&gt;12&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">  &lt;td align=&quot;left&quot;&gt;Pipe&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;right&quot;&gt;$1&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;center&quot;&gt;234&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/tbody&gt;&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+<p>要注意第二行的冒号决定了居左居右还是居中，如果你不加冒号，默认是居左的。</p>
+<p>另外可以把第一行去掉，做成没有表头的表格，但第二行始终是要有的。</p>
+<h2 id="内联-HTML"><a href="#内联-HTML" class="headerlink" title="内联 HTML"></a>内联 HTML</h2><p>markdown 的语法简洁，但有其局限性，所以特意保留了内联html这种方式。任何html标签及其内容，都会原样输出到结果中。也就是说，标签中的星号等作为markdown结构的符号，以及构成html标签和实体的符号，都不会做任何转义。</p>
+<h1 id="Markdown-高级语法"><a href="#Markdown-高级语法" class="headerlink" title="Markdown 高级语法"></a>Markdown 高级语法</h1><p>只有少数编辑器支持，使用前请先确认。</p>
+<h2 id="定义列表"><a href="#定义列表" class="headerlink" title="定义列表"></a>定义列表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Term 1</span><br><span class="line">Term 2</span><br><span class="line">:   Definition A</span><br><span class="line">:   Definition B</span><br></pre></td></tr></table></figure>
+<p>会被编译成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">&lt;dd&gt;Term 1&lt;/dd&gt;</span><br><span class="line">&lt;dd&gt;Term 2&lt;/dd&gt;</span><br><span class="line">&lt;dt&gt;Definition A&lt;dt&gt;</span><br><span class="line">&lt;dt&gt;Definition A&lt;dt&gt;</span><br><span class="line">&lt;/dl&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>通过<code>[TOC]</code>标记来插入目录。</p>
+<p>在编辑器不支持<code>[TOC]</code>标记的情况下可以使用添加id的方法构建目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">### Directory</span><br><span class="line">* [1.Content one](#chapter1)</span><br><span class="line">* [2.Content two](#chapter2)</span><br><span class="line"></span><br><span class="line">### &lt;span id=&quot;chapter1&quot;&gt;1.Content one&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">### &lt;span id=&quot;chapter2&quot;&gt;2.Content two&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="TeX公式"><a href="#TeX公式" class="headerlink" title="TeX公式"></a>TeX公式</h2><p>内联的TeX公式使用一个美元符号标记。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$</span><br></pre></td></tr></table></figure>
+<p>会被编译成</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/3-1.png" alt=""></p>
+<p>TeX公式块用独占一行的两个美元符号来标记。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\Gamma(z) = \int_0^\infty t^&#123;z-1&#125;e^&#123;-t&#125;dt\,.</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>会被编译成</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/3-2.png" alt=""></p>
+<p>如果你的编辑器不支持这个功能，可以手动解决。首先引入mathjax脚本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>之后，在需要插入公式的地方使用<code>&lt;script&gt;</code>标签包裹公式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;math/tex&quot;&gt;\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;math/tex; mode=display&quot;&gt;</span><br><span class="line">\Gamma(z) = \int_0^\infty t^&#123;z-1&#125;e^&#123;-t&#125;dt\,.</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>TeX的语法参考请见<a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">这里</a>。</p>
+<h2 id="UML图"><a href="#UML图" class="headerlink" title="UML图"></a>UML图</h2><p>可以像这样来画uml时序图：</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/3-3.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/3-4.png" alt=""></p>
+<p>这是uml流程图：</p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/3-5.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Fookdies301/markdown-simple-world/master/img/3-6.png" alt=""></p>
+<p>时序图的语法请见<a href="http://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="noopener">这里</a>。流程图的语法请见<a href="http://adrai.github.io/flowchart.js/" target="_blank" rel="noopener">这里</a>。</p>
+<h1 id="markdown部分语法技巧1-字体-换行-缩进"><a href="#markdown部分语法技巧1-字体-换行-缩进" class="headerlink" title="markdown部分语法技巧1 -字体-换行-缩进"></a>markdown部分语法技巧1 -字体-换行-缩进</h1><h2 id="1-换行："><a href="#1-换行：" class="headerlink" title="1.换行："></a>1.换行：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">方法<span class="number">1</span>: 连续两个以上空格+回车</span><br><span class="line">方法<span class="number">2</span>：使用html语言换行标签：&lt;br&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-首行缩进两个字符：-每个表示一个空格，连续使用两个即可）"><a href="#2-首行缩进两个字符：-每个表示一个空格，连续使用两个即可）" class="headerlink" title="2.首行缩进两个字符：(每个表示一个空格，连续使用两个即可）"></a>2.首行缩进两个字符：(每个表示一个空格，连续使用两个即可）</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&amp;ensp; 半角的空格(&amp;#8194;)</span><br><span class="line">&amp;emsp; 全角的空格(&amp;#8195;)</span><br><span class="line">&amp;nbsp; 不断行的空格(&amp;#160;)</span><br></pre></td></tr></table></figure>
+<h2 id="3-字体、字号与颜色"><a href="#3-字体、字号与颜色" class="headerlink" title="3.字体、字号与颜色:"></a>3.<a href="http://blog.csdn.net/testcs_dn/article/details/45719357" target="_blank" rel="noopener">字体、字号与颜色</a>:</h2><h2 id="emsp-emsp-Markdown是一种可以使用普通文本编辑器编写的标记语言，通过类似HTML的标记语法，它可以使普通文本内容具有一定的格式。但是它本身是不支持修改字体、字号与颜色等功能的！"><a href="#emsp-emsp-Markdown是一种可以使用普通文本编辑器编写的标记语言，通过类似HTML的标记语法，它可以使普通文本内容具有一定的格式。但是它本身是不支持修改字体、字号与颜色等功能的！" class="headerlink" title="&emsp;&emsp;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过类似HTML的标记语法，它可以使普通文本内容具有一定的格式。但是它本身是不支持修改字体、字号与颜色等功能的！"></a>&emsp;&emsp;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过类似HTML的标记语法，它可以使普通文本内容具有一定的格式。但是它本身是不支持修改字体、字号与颜色等功能的！</h2><h2 id="emsp-emsp-CSDN-markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）！对，就是内嵌HTML，接下来要讲的功能就需要使用内嵌HTML的方法来实现。"><a href="#emsp-emsp-CSDN-markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）！对，就是内嵌HTML，接下来要讲的功能就需要使用内嵌HTML的方法来实现。" class="headerlink" title="&emsp;&emsp;CSDN-markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）！对，就是内嵌HTML，接下来要讲的功能就需要使用内嵌HTML的方法来实现。"></a>&emsp;&emsp;CSDN-markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）！对，就是内嵌HTML，接下来要讲的功能就需要使用内嵌HTML的方法来实现。</h2><p>字体，字号和颜色编辑如下代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;font face="黑体"&gt;我是黑体字&lt;/font&gt;</span><br><span class="line">&lt;font face="微软雅黑"&gt;我是微软雅黑&lt;/font&gt;</span><br><span class="line">&lt;font face="STCAIYUN"&gt;我是华文彩云&lt;/font&gt;</span><br><span class="line">&lt;font color=#0099ff size=7 face="黑体"&gt;color=#0099ff size=72 face="黑体"&lt;/font&gt;</span><br><span class="line">&lt;font color=#00ffff size=72&gt;color=#00ffff&lt;/font&gt;</span><br><span class="line">&lt;font color=gray size=72&gt;color=gray&lt;/font&gt;</span><br><span class="line"> </span><br><span class="line">Size：规定文本的尺寸大小。可能的值：从 <span class="number">1</span> 到 <span class="number">7</span> 的数字。浏览器默认值是 <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h2 id="具体颜色分类及标记请参照：各种颜色"><a href="#具体颜色分类及标记请参照：各种颜色" class="headerlink" title="具体颜色分类及标记请参照：各种颜色"></a>具体颜色分类及标记请参照：<a href="http://blog.csdn.net/testcs_dn/article/details/45719357/" target="_blank" rel="noopener">各种颜色</a></h2><h2 id="4-背景色："><a href="#4-背景色：" class="headerlink" title="4.背景色："></a>4.<a href="http://blog.csdn.net/testcs_dn/article/details/45766819" target="_blank" rel="noopener">背景色</a>：</h2><blockquote>
+<h2 id="Markdown本身不支持背景色设置，需要采用内置html的方式实现：借助-table-tr-td-等表格标签的-bgcolor-属性来实现背景色的功能。举例如下："><a href="#Markdown本身不支持背景色设置，需要采用内置html的方式实现：借助-table-tr-td-等表格标签的-bgcolor-属性来实现背景色的功能。举例如下：" class="headerlink" title="Markdown本身不支持背景色设置，需要采用内置html的方式实现：借助 table, tr, td 等表格标签的 bgcolor 属性来实现背景色的功能。举例如下："></a>Markdown本身不支持背景色设置，需要采用内置html的方式实现：借助 table, tr, td 等表格标签的 bgcolor 属性来实现背景色的功能。举例如下：</h2></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="背景色"><a href="#背景色" class="headerlink" title="背景色"></a>背景色</h2><blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=#FF4500&gt;这里的背景色是：OrangeRed，  十六进制颜色值：#FF4500， rgb(255, 69, 0)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="呈现效果如下"><a href="#呈现效果如下" class="headerlink" title="呈现效果如下"></a>呈现效果如下</h2><table><tr><td bgcolor="#FF4500">这里的背景色是：OrangeRed，  十六进制颜色值：#FF4500， rgb(255, 69, 0)</td></tr></table>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="5-分割线：你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线"><a href="#5-分割线：你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线" class="headerlink" title="5.分割线：你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线"></a>5.分割线：你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线</h2><h2 id="6-链接：链接文字都是用-方括号-来标记-在方块括号后面紧接着圆括号并插入网址链接即可-可参照-This-link-http-example-NET-has-no-title-attribute"><a href="#6-链接：链接文字都是用-方括号-来标记-在方块括号后面紧接着圆括号并插入网址链接即可-可参照-This-link-http-example-NET-has-no-title-attribute" class="headerlink" title="6.链接：链接文字都是用 [方括号] 来标记,在方块括号后面紧接着圆括号并插入网址链接即可:可参照 [This link](http://example.NET/) has no title attribute."></a>6.链接：链接文字都是用 [方括号] 来标记,在方块括号后面紧接着圆括号并插入网址链接即可:可<a href="http://www.markdown.cn/#links" target="_blank" rel="noopener">参照</a> <code>[This link](http://example.NET/) has no title attribute.</code></h2><h2 id="7-代码块："><a href="#7-代码块：" class="headerlink" title="7.代码块："></a>7.<a href="http://blog.csdn.net/testcs_dn/article/details/44204303" target="_blank" rel="noopener">代码块</a>：</h2><h2 id="emsp-emsp-1-代码块：用2个以上TAB键起始的段落，会被认为是代码块（效果如下）："><a href="#emsp-emsp-1-代码块：用2个以上TAB键起始的段落，会被认为是代码块（效果如下）：" class="headerlink" title="&emsp;&emsp;1.代码块：用2个以上TAB键起始的段落，会被认为是代码块（效果如下）："></a>&emsp;&emsp;1.代码块：用2个以上TAB键起始的段落，会被认为是代码块（效果如下）：</h2><pre><code>struct {
+  int year;
+  int month;
+  int day;
+ }bdate;
+</code></pre><h2 id="emsp-emsp-2-如果在一个行内需要引用代码，只要用反引号-引起来就好-Esc健）"><a href="#emsp-emsp-2-如果在一个行内需要引用代码，只要用反引号-引起来就好-Esc健）" class="headerlink" title="&emsp;&emsp;2.如果在一个行内需要引用代码，只要用反引号`引起来就好(Esc健）"></a>&emsp;&emsp;2.如果在一个行内需要引用代码，只要用反引号`引起来就好(Esc健）</h2><h2 id="emsp-emsp-3-代码块与语法高亮：在需要高亮的代码块的前一行及后一行使用三个反引号“-”，同时第一行反引号后面表面代码块所使用的语言"><a href="#emsp-emsp-3-代码块与语法高亮：在需要高亮的代码块的前一行及后一行使用三个反引号“-”，同时第一行反引号后面表面代码块所使用的语言" class="headerlink" title="&emsp;&emsp;3.代码块与语法高亮：在需要高亮的代码块的前一行及后一行使用三个反引号“`”，同时第一行反引号后面表面代码块所使用的语言"></a>&emsp;&emsp;3.代码块与语法高亮：在需要高亮的代码块的前一行及后一行使用三个反引号“`”，同时第一行反引号后面表面代码块所使用的语言</h2><h2 id="8-使用LaTex数学公式"><a href="#8-使用LaTex数学公式" class="headerlink" title="8.使用LaTex数学公式:"></a>8.<a href="http://blog.csdn.net/testcs_dn/article/details/44229085" target="_blank" rel="noopener">使用LaTex数学公式</a>:</h2><h2 id="emsp-emsp-1-行内公式：使用两个”-”符号引用公式-公式"><a href="#emsp-emsp-1-行内公式：使用两个”-”符号引用公式-公式" class="headerlink" title="&emsp;&emsp;1.行内公式：使用两个”$”符号引用公式: $公式$"></a>&emsp;&emsp;1.行内公式：使用两个”$”符号引用公式: $公式$</h2><h2 id="emsp-emsp-2-行间公式：使用两对“-”符号引用公式：-公式"><a href="#emsp-emsp-2-行间公式：使用两对“-”符号引用公式：-公式" class="headerlink" title="&emsp;&emsp;2.行间公式：使用两对“$$”符号引用公式： $$公式$$"></a>&emsp;&emsp;2.行间公式：使用两对“$$”符号引用公式： $$公式$$</h2><h1 id="字体、字号与颜色"><a href="#字体、字号与颜色" class="headerlink" title="字体、字号与颜色"></a>字体、字号与颜色</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;font face=<span class="string">"黑体"</span>&gt;我是黑体字&lt;<span class="regexp">/font&gt;</span></span><br><span class="line"><span class="regexp">&lt;font face="微软雅黑"&gt;我是微软雅黑&lt;/</span>font&gt;</span><br><span class="line">&lt;font face=<span class="string">"STCAIYUN"</span>&gt;我是华文彩云&lt;<span class="regexp">/font&gt;</span></span><br><span class="line"><span class="regexp">&lt;font color=#0099ff size=7 face="黑体"&gt;color=#0099ff size=72 face="黑体"&lt;/</span>font&gt;</span><br><span class="line">&lt;font color=#00ffff size=72&gt;color=#00ffff&lt;/font&gt;</span><br><span class="line">&lt;font color=gray size=<span class="number">72</span>&gt;color=gray&lt;<span class="regexp">/font&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Size：规定文本的尺寸大小。可能的值：从-1-到-7-的数字。浏览器默认值是-3。"><a href="#Size：规定文本的尺寸大小。可能的值：从-1-到-7-的数字。浏览器默认值是-3。" class="headerlink" title="Size：规定文本的尺寸大小。可能的值：从 1 到 7 的数字。浏览器默认值是 3。"></a>Size：规定文本的尺寸大小。可能的值：从 1 到 7 的数字。浏览器默认值是 3。</h2><h2 id="呈现效果"><a href="#呈现效果" class="headerlink" title="呈现效果"></a>呈现效果</h2><font face="黑体">我是黑体字</font><br><font face="微软雅黑">我是微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font color="#0099ff" size="7" face="黑体">color=#0099ff size=72 face=”黑体”</font><br><font color="#00ffff" size="72">color=#00ffff</font><br><font color="gray" size="72">color=gray</font>
+
+<h1 id="颜色名列表"><a href="#颜色名列表" class="headerlink" title="颜色名列表"></a>颜色名列表</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">颜色名</th>
+<th style="text-align:center">十六进制颜色值</th>
+<th style="text-align:center">颜色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">AliceBlue</td>
+<td style="text-align:center">#F0F8FF</td>
+<td style="text-align:center">rgb(240, 248, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">AntiqueWhite</td>
+<td style="text-align:center">#FAEBD7</td>
+<td style="text-align:center">rgb(250, 235, 215)</td>
+</tr>
+<tr>
+<td style="text-align:center">Aqua</td>
+<td style="text-align:center">#00FFFF</td>
+<td style="text-align:center">rgb(0, 255, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">Aquamarine</td>
+<td style="text-align:center">#7FFFD4</td>
+<td style="text-align:center">rgb(127, 255, 212)</td>
+</tr>
+<tr>
+<td style="text-align:center">Azure</td>
+<td style="text-align:center">#F0FFFF</td>
+<td style="text-align:center">rgb(240, 255, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">Beige</td>
+<td style="text-align:center">#F5F5DC</td>
+<td style="text-align:center">rgb(245, 245, 220)</td>
+</tr>
+<tr>
+<td style="text-align:center">Bisque</td>
+<td style="text-align:center">#FFE4C4</td>
+<td style="text-align:center">rgb(255, 228, 196)</td>
+</tr>
+<tr>
+<td style="text-align:center">Black</td>
+<td style="text-align:center">#000000</td>
+<td style="text-align:center">rgb(0, 0, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">BlanchedAlmond</td>
+<td style="text-align:center">#FFEBCD</td>
+<td style="text-align:center">rgb(255, 235, 205)</td>
+</tr>
+<tr>
+<td style="text-align:center">Blue</td>
+<td style="text-align:center">#0000FF</td>
+<td style="text-align:center">rgb(0, 0, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">BlueViolet</td>
+<td style="text-align:center">#8A2BE2</td>
+<td style="text-align:center">rgb(138, 43, 226)</td>
+</tr>
+<tr>
+<td style="text-align:center">Brown</td>
+<td style="text-align:center">#A52A2A</td>
+<td style="text-align:center">rgb(165, 42, 42)</td>
+</tr>
+<tr>
+<td style="text-align:center">BurlyWood</td>
+<td style="text-align:center">#DEB887</td>
+<td style="text-align:center">rgb(222, 184, 135)</td>
+</tr>
+<tr>
+<td style="text-align:center">CadetBlue</td>
+<td style="text-align:center">#5F9EA0</td>
+<td style="text-align:center">rgb(95, 158, 160)</td>
+</tr>
+<tr>
+<td style="text-align:center">Chartreuse</td>
+<td style="text-align:center">#7FFF00</td>
+<td style="text-align:center">rgb(127, 255, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">Chocolate</td>
+<td style="text-align:center">#D2691E</td>
+<td style="text-align:center">rgb(210, 105, 30)</td>
+</tr>
+<tr>
+<td style="text-align:center">Coral</td>
+<td style="text-align:center">#FF7F50</td>
+<td style="text-align:center">rgb(255, 127, 80)</td>
+</tr>
+<tr>
+<td style="text-align:center">CornflowerBlue</td>
+<td style="text-align:center">#6495ED</td>
+<td style="text-align:center">rgb(100, 149, 237)</td>
+</tr>
+<tr>
+<td style="text-align:center">Cornsilk</td>
+<td style="text-align:center">#FFF8DC</td>
+<td style="text-align:center">rgb(255, 248, 220)</td>
+</tr>
+<tr>
+<td style="text-align:center">Crimson</td>
+<td style="text-align:center">#DC143C</td>
+<td style="text-align:center">rgb(220, 20, 60)</td>
+</tr>
+<tr>
+<td style="text-align:center">Cyan</td>
+<td style="text-align:center">#00FFFF</td>
+<td style="text-align:center">rgb(0, 255, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkBlue</td>
+<td style="text-align:center">#00008B</td>
+<td style="text-align:center">rgb(0, 0, 139)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkCyan</td>
+<td style="text-align:center">#008B8B</td>
+<td style="text-align:center">rgb(0, 139, 139)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkGoldenRod</td>
+<td style="text-align:center">#B8860B</td>
+<td style="text-align:center">rgb(184, 134, 11)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkGray</td>
+<td style="text-align:center">#A9A9A9</td>
+<td style="text-align:center">rgb(169, 169, 169)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkGreen</td>
+<td style="text-align:center">#006400</td>
+<td style="text-align:center">rgb(0, 100, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkKhaki</td>
+<td style="text-align:center">#BDB76B</td>
+<td style="text-align:center">rgb(189, 183, 107)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkMagenta</td>
+<td style="text-align:center">#8B008B</td>
+<td style="text-align:center">rgb(139, 0, 139)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkOliveGreen</td>
+<td style="text-align:center">#556B2F</td>
+<td style="text-align:center">rgb(85, 107, 47)</td>
+</tr>
+<tr>
+<td style="text-align:center">Darkorange</td>
+<td style="text-align:center">#FF8C00</td>
+<td style="text-align:center">rgb(255, 140, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkOrchid</td>
+<td style="text-align:center">#9932CC</td>
+<td style="text-align:center">rgb(153, 50, 204)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkRed</td>
+<td style="text-align:center">#8B0000</td>
+<td style="text-align:center">rgb(139, 0, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkSalmon</td>
+<td style="text-align:center">#E9967A</td>
+<td style="text-align:center">rgb(233, 150, 122)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkSeaGreen</td>
+<td style="text-align:center">#8FBC8F</td>
+<td style="text-align:center">rgb(143, 188, 143)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkSlateBlue</td>
+<td style="text-align:center">#483D8B</td>
+<td style="text-align:center">rgb(72, 61, 139)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkSlateGray</td>
+<td style="text-align:center">#2F4F4F</td>
+<td style="text-align:center">rgb(47, 79, 79)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkTurquoise</td>
+<td style="text-align:center">#00CED1</td>
+<td style="text-align:center">rgb(0, 206, 209)</td>
+</tr>
+<tr>
+<td style="text-align:center">DarkViolet</td>
+<td style="text-align:center">#9400D3</td>
+<td style="text-align:center">rgb(148, 0, 211)</td>
+</tr>
+<tr>
+<td style="text-align:center">DeepPink</td>
+<td style="text-align:center">#FF1493</td>
+<td style="text-align:center">rgb(255, 20, 147)</td>
+</tr>
+<tr>
+<td style="text-align:center">DeepSkyBlue</td>
+<td style="text-align:center">#00BFFF</td>
+<td style="text-align:center">rgb(0, 191, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">DimGray</td>
+<td style="text-align:center">#696969</td>
+<td style="text-align:center">rgb(105, 105, 105)</td>
+</tr>
+<tr>
+<td style="text-align:center">DodgerBlue</td>
+<td style="text-align:center">#1E90FF</td>
+<td style="text-align:center">rgb(30, 144, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">Feldspar</td>
+<td style="text-align:center">#D19275</td>
+<td style="text-align:center">rgb(209, 146, 117)</td>
+</tr>
+<tr>
+<td style="text-align:center">FireBrick</td>
+<td style="text-align:center">#B22222</td>
+<td style="text-align:center">rgb(178, 34, 34)</td>
+</tr>
+<tr>
+<td style="text-align:center">FloralWhite</td>
+<td style="text-align:center">#FFFAF0</td>
+<td style="text-align:center">rgb(255, 250, 240)</td>
+</tr>
+<tr>
+<td style="text-align:center">ForestGreen</td>
+<td style="text-align:center">#228B22</td>
+<td style="text-align:center">rgb(34, 139, 34)</td>
+</tr>
+<tr>
+<td style="text-align:center">Fuchsia</td>
+<td style="text-align:center">#FF00FF</td>
+<td style="text-align:center">rgb(255, 0, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">Gainsboro</td>
+<td style="text-align:center">#DCDCDC</td>
+<td style="text-align:center">rgb(220, 220, 220)</td>
+</tr>
+<tr>
+<td style="text-align:center">GhostWhite</td>
+<td style="text-align:center">#F8F8FF</td>
+<td style="text-align:center">rgb(248, 248, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">Gold</td>
+<td style="text-align:center">#FFD700</td>
+<td style="text-align:center">rgb(255, 215, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">GoldenRod</td>
+<td style="text-align:center">#DAA520</td>
+<td style="text-align:center">rgb(218, 165, 32)</td>
+</tr>
+<tr>
+<td style="text-align:center">Gray</td>
+<td style="text-align:center">#808080</td>
+<td style="text-align:center">rgb(128, 128, 128)</td>
+</tr>
+<tr>
+<td style="text-align:center">Green</td>
+<td style="text-align:center">#008000</td>
+<td style="text-align:center">rgb(0, 128, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">GreenYellow</td>
+<td style="text-align:center">#ADFF2F</td>
+<td style="text-align:center">rgb(173, 255, 47)</td>
+</tr>
+<tr>
+<td style="text-align:center">HoneyDew</td>
+<td style="text-align:center">#F0FFF0</td>
+<td style="text-align:center">rgb(240, 255, 240)</td>
+</tr>
+<tr>
+<td style="text-align:center">HotPink</td>
+<td style="text-align:center">#FF69B4</td>
+<td style="text-align:center">rgb(255, 105, 180)</td>
+</tr>
+<tr>
+<td style="text-align:center">IndianRed</td>
+<td style="text-align:center">#CD5C5C</td>
+<td style="text-align:center">rgb(205, 92, 92)</td>
+</tr>
+<tr>
+<td style="text-align:center">Indigo</td>
+<td style="text-align:center">#4B0082</td>
+<td style="text-align:center">rgb(75, 0, 130)</td>
+</tr>
+<tr>
+<td style="text-align:center">Ivory</td>
+<td style="text-align:center">#FFFFF0</td>
+<td style="text-align:center">rgb(255, 255, 240)</td>
+</tr>
+<tr>
+<td style="text-align:center">Khaki</td>
+<td style="text-align:center">#F0E68C</td>
+<td style="text-align:center">rgb(240, 230, 140)</td>
+</tr>
+<tr>
+<td style="text-align:center">Lavender</td>
+<td style="text-align:center">#E6E6FA</td>
+<td style="text-align:center">rgb(230, 230, 250)</td>
+</tr>
+<tr>
+<td style="text-align:center">LavenderBlush</td>
+<td style="text-align:center">#FFF0F5</td>
+<td style="text-align:center">rgb(255, 240, 245)</td>
+</tr>
+<tr>
+<td style="text-align:center">LawnGreen</td>
+<td style="text-align:center">#7CFC00</td>
+<td style="text-align:center">rgb(124, 252, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">LemonChiffon</td>
+<td style="text-align:center">#FFFACD</td>
+<td style="text-align:center">rgb(255, 250, 205)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightBlue</td>
+<td style="text-align:center">#ADD8E6</td>
+<td style="text-align:center">rgb(173, 216, 230)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightCoral</td>
+<td style="text-align:center">#F08080</td>
+<td style="text-align:center">rgb(240, 128, 128)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightCyan</td>
+<td style="text-align:center">#E0FFFF</td>
+<td style="text-align:center">rgb(224, 255, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightGoldenRodYellow</td>
+<td style="text-align:center">#FAFAD2</td>
+<td style="text-align:center">rgb(250, 250, 210)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightGrey</td>
+<td style="text-align:center">#D3D3D3</td>
+<td style="text-align:center">rgb(211, 211, 211)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightGreen</td>
+<td style="text-align:center">#90EE90</td>
+<td style="text-align:center">rgb(144, 238, 144)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightPink</td>
+<td style="text-align:center">#FFB6C1</td>
+<td style="text-align:center">rgb(255, 182, 193)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightSalmon</td>
+<td style="text-align:center">#FFA07A</td>
+<td style="text-align:center">rgb(255, 160, 122)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightSeaGreen</td>
+<td style="text-align:center">#20B2AA</td>
+<td style="text-align:center">rgb(32, 178, 170)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightSkyBlue</td>
+<td style="text-align:center">#87CEFA</td>
+<td style="text-align:center">rgb(135, 206, 250)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightSlateBlue</td>
+<td style="text-align:center">#8470FF</td>
+<td style="text-align:center">rgb(132, 112, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightSlateGray</td>
+<td style="text-align:center">#778899</td>
+<td style="text-align:center">rgb(119, 136, 153)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightSteelBlue</td>
+<td style="text-align:center">#B0C4DE</td>
+<td style="text-align:center">rgb(176, 196, 222)</td>
+</tr>
+<tr>
+<td style="text-align:center">LightYellow</td>
+<td style="text-align:center">#FFFFE0</td>
+<td style="text-align:center">rgb(255, 255, 224)</td>
+</tr>
+<tr>
+<td style="text-align:center">Lime</td>
+<td style="text-align:center">#00FF00</td>
+<td style="text-align:center">rgb(0, 255, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">LimeGreen</td>
+<td style="text-align:center">#32CD32</td>
+<td style="text-align:center">rgb(50, 205, 50)</td>
+</tr>
+<tr>
+<td style="text-align:center">Linen</td>
+<td style="text-align:center">#FAF0E6</td>
+<td style="text-align:center">rgb(250, 240, 230)</td>
+</tr>
+<tr>
+<td style="text-align:center">Magenta</td>
+<td style="text-align:center">#FF00FF</td>
+<td style="text-align:center">rgb(255, 0, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">Maroon</td>
+<td style="text-align:center">#800000</td>
+<td style="text-align:center">rgb(128, 0, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">MediumAquaMarine</td>
+<td style="text-align:center">#66CDAA</td>
+<td style="text-align:center">rgb(102, 205, 170)</td>
+</tr>
+<tr>
+<td style="text-align:center">MediumBlue</td>
+<td style="text-align:center">#0000CD</td>
+<td style="text-align:center">rgb(0, 0, 205)</td>
+</tr>
+<tr>
+<td style="text-align:center">MediumOrchid</td>
+<td style="text-align:center">#BA55D3</td>
+<td style="text-align:center">rgb(186, 85, 211)</td>
+</tr>
+<tr>
+<td style="text-align:center">MediumPurple</td>
+<td style="text-align:center">#9370D8</td>
+<td style="text-align:center">rgb(147, 112, 216)</td>
+</tr>
+<tr>
+<td style="text-align:center">MediumSeaGreen</td>
+<td style="text-align:center">#3CB371</td>
+<td style="text-align:center">rgb(60, 179, 113)</td>
+</tr>
+<tr>
+<td style="text-align:center">MediumSlateBlue</td>
+<td style="text-align:center">#7B68EE</td>
+<td style="text-align:center">rgb(123, 104, 238)</td>
+</tr>
+<tr>
+<td style="text-align:center">MediumSpringGreen</td>
+<td style="text-align:center">#00FA9A</td>
+<td style="text-align:center">rgb(0, 250, 154)</td>
+</tr>
+<tr>
+<td style="text-align:center">MediumTurquoise</td>
+<td style="text-align:center">#48D1CC</td>
+<td style="text-align:center">rgb(72, 209, 204)</td>
+</tr>
+<tr>
+<td style="text-align:center">MediumVioletRed</td>
+<td style="text-align:center">#C71585</td>
+<td style="text-align:center">rgb(199, 21, 133)</td>
+</tr>
+<tr>
+<td style="text-align:center">MidnightBlue</td>
+<td style="text-align:center">#191970</td>
+<td style="text-align:center">rgb(25, 25, 112)</td>
+</tr>
+<tr>
+<td style="text-align:center">MintCream</td>
+<td style="text-align:center">#F5FFFA</td>
+<td style="text-align:center">rgb(245, 255, 250)</td>
+</tr>
+<tr>
+<td style="text-align:center">MistyRose</td>
+<td style="text-align:center">#FFE4E1</td>
+<td style="text-align:center">rgb(255, 228, 225)</td>
+</tr>
+<tr>
+<td style="text-align:center">Moccasin</td>
+<td style="text-align:center">#FFE4B5</td>
+<td style="text-align:center">rgb(255, 228, 181)</td>
+</tr>
+<tr>
+<td style="text-align:center">NavajoWhite</td>
+<td style="text-align:center">#FFDEAD</td>
+<td style="text-align:center">rgb(255, 222, 173)</td>
+</tr>
+<tr>
+<td style="text-align:center">Navy</td>
+<td style="text-align:center">#000080</td>
+<td style="text-align:center">rgb(0, 0, 128)</td>
+</tr>
+<tr>
+<td style="text-align:center">OldLace</td>
+<td style="text-align:center">#FDF5E6</td>
+<td style="text-align:center">rgb(253, 245, 230)</td>
+</tr>
+<tr>
+<td style="text-align:center">Olive</td>
+<td style="text-align:center">#808000</td>
+<td style="text-align:center">rgb(128, 128, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">OliveDrab</td>
+<td style="text-align:center">#6B8E23</td>
+<td style="text-align:center">rgb(107, 142, 35)</td>
+</tr>
+<tr>
+<td style="text-align:center">Orange</td>
+<td style="text-align:center">#FFA500</td>
+<td style="text-align:center">rgb(255, 165, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">OrangeRed</td>
+<td style="text-align:center">#FF4500</td>
+<td style="text-align:center">rgb(255, 69, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">Orchid</td>
+<td style="text-align:center">#DA70D6</td>
+<td style="text-align:center">rgb(218, 112, 214)</td>
+</tr>
+<tr>
+<td style="text-align:center">PaleGoldenRod</td>
+<td style="text-align:center">#EEE8AA</td>
+<td style="text-align:center">rgb(238, 232, 170)</td>
+</tr>
+<tr>
+<td style="text-align:center">PaleGreen</td>
+<td style="text-align:center">#98FB98</td>
+<td style="text-align:center">rgb(152, 251, 152)</td>
+</tr>
+<tr>
+<td style="text-align:center">PaleTurquoise</td>
+<td style="text-align:center">#AFEEEE</td>
+<td style="text-align:center">rgb(175, 238, 238)</td>
+</tr>
+<tr>
+<td style="text-align:center">PaleVioletRed</td>
+<td style="text-align:center">#D87093</td>
+<td style="text-align:center">rgb(216, 112, 147)</td>
+</tr>
+<tr>
+<td style="text-align:center">PapayaWhip</td>
+<td style="text-align:center">#FFEFD5</td>
+<td style="text-align:center">rgb(255, 239, 213)</td>
+</tr>
+<tr>
+<td style="text-align:center">PeachPuff</td>
+<td style="text-align:center">#FFDAB9</td>
+<td style="text-align:center">rgb(255, 218, 185)</td>
+</tr>
+<tr>
+<td style="text-align:center">Peru</td>
+<td style="text-align:center">#CD853F</td>
+<td style="text-align:center">rgb(205, 133, 63)</td>
+</tr>
+<tr>
+<td style="text-align:center">Pink</td>
+<td style="text-align:center">#FFC0CB</td>
+<td style="text-align:center">rgb(255, 192, 203)</td>
+</tr>
+<tr>
+<td style="text-align:center">Plum</td>
+<td style="text-align:center">#DDA0DD</td>
+<td style="text-align:center">rgb(221, 160, 221)</td>
+</tr>
+<tr>
+<td style="text-align:center">PowderBlue</td>
+<td style="text-align:center">#B0E0E6</td>
+<td style="text-align:center">rgb(176, 224, 230)</td>
+</tr>
+<tr>
+<td style="text-align:center">Purple</td>
+<td style="text-align:center">#800080</td>
+<td style="text-align:center">rgb(128, 0, 128)</td>
+</tr>
+<tr>
+<td style="text-align:center">Red</td>
+<td style="text-align:center">#FF0000</td>
+<td style="text-align:center">rgb(255, 0, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">RosyBrown</td>
+<td style="text-align:center">#BC8F8F</td>
+<td style="text-align:center">rgb(188, 143, 143)</td>
+</tr>
+<tr>
+<td style="text-align:center">RoyalBlue</td>
+<td style="text-align:center">#4169E1</td>
+<td style="text-align:center">rgb(65, 105, 225)</td>
+</tr>
+<tr>
+<td style="text-align:center">SaddleBrown</td>
+<td style="text-align:center">#8B4513</td>
+<td style="text-align:center">rgb(139, 69, 19)</td>
+</tr>
+<tr>
+<td style="text-align:center">Salmon</td>
+<td style="text-align:center">#FA8072</td>
+<td style="text-align:center">rgb(250, 128, 114)</td>
+</tr>
+<tr>
+<td style="text-align:center">SandyBrown</td>
+<td style="text-align:center">#F4A460</td>
+<td style="text-align:center">rgb(244, 164, 96)</td>
+</tr>
+<tr>
+<td style="text-align:center">SeaGreen</td>
+<td style="text-align:center">#2E8B57</td>
+<td style="text-align:center">rgb(46, 139, 87)</td>
+</tr>
+<tr>
+<td style="text-align:center">SeaShell</td>
+<td style="text-align:center">#FFF5EE</td>
+<td style="text-align:center">rgb(255, 245, 238)</td>
+</tr>
+<tr>
+<td style="text-align:center">Sienna</td>
+<td style="text-align:center">#A0522D</td>
+<td style="text-align:center">rgb(160, 82, 45)</td>
+</tr>
+<tr>
+<td style="text-align:center">Silver</td>
+<td style="text-align:center">#C0C0C0</td>
+<td style="text-align:center">rgb(192, 192, 192)</td>
+</tr>
+<tr>
+<td style="text-align:center">SkyBlue</td>
+<td style="text-align:center">#87CEEB</td>
+<td style="text-align:center">rgb(135, 206, 235)</td>
+</tr>
+<tr>
+<td style="text-align:center">SlateBlue</td>
+<td style="text-align:center">#6A5ACD</td>
+<td style="text-align:center">rgb(106, 90, 205)</td>
+</tr>
+<tr>
+<td style="text-align:center">SlateGray</td>
+<td style="text-align:center">#708090</td>
+<td style="text-align:center">rgb(112, 128, 144)</td>
+</tr>
+<tr>
+<td style="text-align:center">Snow</td>
+<td style="text-align:center">#FFFAFA</td>
+<td style="text-align:center">rgb(255, 250, 250)</td>
+</tr>
+<tr>
+<td style="text-align:center">SpringGreen</td>
+<td style="text-align:center">#00FF7F</td>
+<td style="text-align:center">rgb(0, 255, 127)</td>
+</tr>
+<tr>
+<td style="text-align:center">SteelBlue</td>
+<td style="text-align:center">#4682B4</td>
+<td style="text-align:center">rgb(70, 130, 180)</td>
+</tr>
+<tr>
+<td style="text-align:center">Tan</td>
+<td style="text-align:center">#D2B48C</td>
+<td style="text-align:center">rgb(210, 180, 140)</td>
+</tr>
+<tr>
+<td style="text-align:center">Teal</td>
+<td style="text-align:center">#008080</td>
+<td style="text-align:center">rgb(0, 128, 128)</td>
+</tr>
+<tr>
+<td style="text-align:center">Thistle</td>
+<td style="text-align:center">#D8BFD8</td>
+<td style="text-align:center">rgb(216, 191, 216)</td>
+</tr>
+<tr>
+<td style="text-align:center">Tomato</td>
+<td style="text-align:center">#FF6347</td>
+<td style="text-align:center">rgb(255, 99, 71)</td>
+</tr>
+<tr>
+<td style="text-align:center">Turquoise</td>
+<td style="text-align:center">#40E0D0</td>
+<td style="text-align:center">rgb(64, 224, 208)</td>
+</tr>
+<tr>
+<td style="text-align:center">Violet</td>
+<td style="text-align:center">#EE82EE</td>
+<td style="text-align:center">rgb(238, 130, 238)</td>
+</tr>
+<tr>
+<td style="text-align:center">VioletRed</td>
+<td style="text-align:center">#D02090</td>
+<td style="text-align:center">rgb(208, 32, 144)</td>
+</tr>
+<tr>
+<td style="text-align:center">Wheat</td>
+<td style="text-align:center">#F5DEB3</td>
+<td style="text-align:center">rgb(245, 222, 179)</td>
+</tr>
+<tr>
+<td style="text-align:center">White</td>
+<td style="text-align:center">#FFFFFF</td>
+<td style="text-align:center">rgb(255, 255, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">WhiteSmoke</td>
+<td style="text-align:center">#F5F5F5</td>
+<td style="text-align:center">rgb(245, 245, 245)</td>
+</tr>
+<tr>
+<td style="text-align:center">Yellow</td>
+<td style="text-align:center">#FFFF00</td>
+<td style="text-align:center">rgb(255, 255, 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">YellowGreen</td>
+<td style="text-align:center">#9ACD32</td>
+<td style="text-align:center">rgb(154, 205, 50)</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get" action="/blog/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            point
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/blog/imgs/avatar.jpg" width="140" height="140" alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/13cff3c5/">Markdown + Pandoc</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/f5780708/">Markdown + R</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/5bef2f89/">Gitbook制作电子书</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/7894e390/">Markdown 基本语法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/fb31f1f7/">git命令使用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/671ebdfb/">MarkdownPad2安装与破解</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/515db3f0/">New Document</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/3fd15368/">MarkdownPad2 Github在线报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/02/b916a8dc/">环境变量</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/fb31f1f7/">git命令使用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/3fd15368/">MarkdownPad2 Github在线报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/02/b916a8dc/">环境变量</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/13cff3c5/">Markdown + Pandoc</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/515db3f0/">New Document</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/671ebdfb/">MarkdownPad2安装与破解</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/5bef2f89/">Gitbook制作电子书</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/f5780708/">Markdown + R</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/7894e390/">Markdown 基本语法</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/blog/2019/01/05/7894e390/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/blog/2019/01/05/7894e390/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/blog/2019/01/05/7894e390/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/blog/tags/git/" style="font-size: 15.33682291781804px;" class="tag-cloud-link">git</a>
+    
+    <a href="/blog/tags/命令/" style="font-size: 16.534314294043092px;" class="tag-cloud-link">命令</a>
+    
+    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 16.546304495977978px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
+    
+    <a href="/blog/tags/环境变量/" style="font-size: 13.563454362339609px;" class="tag-cloud-link">环境变量</a>
+    
+    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 13.855550157337507px;" class="tag-cloud-link">Markdown+Pandoc</a>
+    
+    <a href="/blog/tags/引导/" style="font-size: 16.15244103221919px;" class="tag-cloud-link">引导</a>
+    
+    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 17.832193465226023px;" class="tag-cloud-link">MarkdownPad2安装</a>
+    
+    <a href="/blog/tags/Gitbook/" style="font-size: 15.30200206472116px;" class="tag-cloud-link">Gitbook</a>
+    
+    <a href="/blog/tags/Markdown/" style="font-size: 8.683871426578255px;" class="tag-cloud-link">Markdown</a>
+    
+    <a href="/blog/tags/Markdown-R/" style="font-size: 14.401435953186834px;" class="tag-cloud-link">Markdown + R</a>
+    
+    <a href="/blog/tags/Markdown语法/" style="font-size: 17.25188270586973px;" class="tag-cloud-link">Markdown语法</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/Fookdies301/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 point Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+<script src="/blog/js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/blog/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+<script src="/blog/js/hs.js"></script>
+<script src="/blog/js/blog.js"></script>
+
+<script src="/blog/js/oni.js"></script>
+
+
+
+</html>

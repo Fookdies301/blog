@@ -10,7 +10,7 @@
     
     
     
-    <title>Hello World | Point</title>
+    <title>git命令使用 | Point</title>
     <link href="”https://Fookdies301.github.io/blog“" rel="”prefetch”">
 
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -206,19 +206,28 @@
         <i class="fa fa-home"></i>
         <a href="https://Fookdies301.github.io/blog">Point</a>
         >
-        <span>Hello World</span>
+        <span>git命令使用</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                <a href="/blog/2019/01/05/fb31f1f7/">git命令使用</a>
             </h1>
         </div>
         <div class="tag-article">
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2019-01-02
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/git/">git</a>, 
+                
+                <a href="/blog/tags/命令/">命令</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-01-05
             </span>
             
         </div>
@@ -228,29 +237,27 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                    <a href="/blog/2019/01/05/fb31f1f7/">git命令使用</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2019-01-02
+                <i class="fa fa-calendar"></i> 2019-01-05
             </p>
             <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/git/">git</a>, 
+                
+                <a href="/blog/tags/命令/">命令</a>
+                
                 
                 
             </p>
         </center>
     </div>
     <div class="content-article">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h1 id="使用Git命令把本地项目上传到Github托管"><a href="#使用Git命令把本地项目上传到Github托管" class="headerlink" title="使用Git命令把本地项目上传到Github托管"></a>使用Git命令把本地项目上传到Github托管</h1><h2 id="nbsp-nbsp-nbsp-nbsp-我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下："><a href="#nbsp-nbsp-nbsp-nbsp-我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下：" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下："></a>&nbsp;&nbsp;&nbsp;&nbsp;我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下：</h2><h2 id="（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可"><a href="#（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可" class="headerlink" title="（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可"></a>（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可</h2><h2 id="（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到"><a href="#（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到" class="headerlink" title="（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到"></a>（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到</h2><h2 id="3-然后我在本地有一个项目，名称为News，终端进入我的项目目录"><a href="#3-然后我在本地有一个项目，名称为News，终端进入我的项目目录" class="headerlink" title="(3) 然后我在本地有一个项目，名称为News，终端进入我的项目目录"></a>(3) 然后我在本地有一个项目，名称为News，终端进入我的项目目录</h2><h2 id="4-执行命令：git-init"><a href="#4-执行命令：git-init" class="headerlink" title="(4) 执行命令：git init"></a>(4) 执行命令：<code>git init</code></h2><h2 id="该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个-git的隐藏文件。"><a href="#该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个-git的隐藏文件。" class="headerlink" title="该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个.git的隐藏文件。"></a>该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个.git的隐藏文件。</h2><h2 id="5-执行命令：git-add"><a href="#5-执行命令：git-add" class="headerlink" title="(5) 执行命令：git add ."></a>(5) 执行命令：<code>git add .</code></h2><h2 id="注意该命令后面有一个“-”-小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示"><a href="#注意该命令后面有一个“-”-小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示" class="headerlink" title="注意该命令后面有一个“.”,小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示"></a>注意该命令后面有一个“.”,小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示</h2><h2 id="6-执行命令：git-status"><a href="#6-执行命令：git-status" class="headerlink" title="(6) 执行命令：git status"></a>(6) 执行命令：<code>git status</code></h2><h2 id="该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）"><a href="#该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）" class="headerlink" title="该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）"></a>该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）</h2><h2 id="7-执行命令：git-commit-m-quot-这里是注释。。。-quot"><a href="#7-执行命令：git-commit-m-quot-这里是注释。。。-quot" class="headerlink" title="(7) 执行命令：git commit -m &quot;这里是注释。。。&quot;"></a>(7) 执行命令：<code>git commit -m &quot;这里是注释。。。&quot;</code></h2><h2 id="该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git-commit-m-quot-Initial-commit-quot"><a href="#该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git-commit-m-quot-Initial-commit-quot" class="headerlink" title="该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git commit -m &quot;Initial commit&quot;"></a>该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。<code>git commit -m &quot;Initial commit&quot;</code></h2><h2 id="8-执行命令：git-remote-add-origin-https-github-com-username-repository-git或git-remote-add-origin-git-github-com-username-repository-git"><a href="#8-执行命令：git-remote-add-origin-https-github-com-username-repository-git或git-remote-add-origin-git-github-com-username-repository-git" class="headerlink" title="(8) 执行命令：git remote add origin https://github.com/username/repository.git或git remote add origin git@github.com:username/repository.git"></a>(8) 执行命令：<code>git remote add origin https://github.com/username/repository.git</code>或<code>git remote add origin git@github.com:username/repository.git</code></h2><h2 id="该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果"><a href="#该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果" class="headerlink" title="该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果"></a>该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果</h2><h2 id="9-执行命令：git-pull-origin-master"><a href="#9-执行命令：git-pull-origin-master" class="headerlink" title="(9) 执行命令：git pull origin master"></a>(9) 执行命令：<code>git pull origin master</code></h2><h2 id="该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。"><a href="#该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。" class="headerlink" title="该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。"></a>该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。</h2><h2 id="10-执行命令：git-push-u-origin-master"><a href="#10-执行命令：git-push-u-origin-master" class="headerlink" title="(10) 执行命令：git push -u origin master"></a>(10) 执行命令：<code>git push -u origin master</code></h2><h2 id="这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。"><a href="#这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。" class="headerlink" title="这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。"></a>这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。</h2><h2 id="初次提交是上面的命令，多次为git-push-origin-master"><a href="#初次提交是上面的命令，多次为git-push-origin-master" class="headerlink" title="初次提交是上面的命令，多次为git push origin master"></a>初次提交是上面的命令，多次为<code>git push origin master</code></h2>
     </div>
 </article>
 
@@ -454,17 +461,17 @@
 
                 
                 <li>
-                    <a href="/blog/2019/01/02/4a17b156/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/blog/2019/01/05/fb31f1f7/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/blog/2019/01/02/4a17b156/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/blog/2019/01/05/fb31f1f7/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/blog/2019/01/02/4a17b156/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/blog/2019/01/05/fb31f1f7/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -472,27 +479,27 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/blog/tags/git/" style="font-size: 19.130420155698427px;" class="tag-cloud-link">git</a>
+    <a href="/blog/tags/git/" style="font-size: 19.314396524792002px;" class="tag-cloud-link">git</a>
     
-    <a href="/blog/tags/命令/" style="font-size: 9.16917465258669px;" class="tag-cloud-link">命令</a>
+    <a href="/blog/tags/命令/" style="font-size: 18.303720844775984px;" class="tag-cloud-link">命令</a>
     
-    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 9.646771880117882px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
+    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 8.38458319748535px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
     
-    <a href="/blog/tags/环境变量/" style="font-size: 12.174397415186796px;" class="tag-cloud-link">环境变量</a>
+    <a href="/blog/tags/环境变量/" style="font-size: 11.864799829970174px;" class="tag-cloud-link">环境变量</a>
     
-    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 17.789976571358046px;" class="tag-cloud-link">Markdown+Pandoc</a>
+    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 10.746158180376874px;" class="tag-cloud-link">Markdown+Pandoc</a>
     
-    <a href="/blog/tags/引导/" style="font-size: 17.80688518818582px;" class="tag-cloud-link">引导</a>
+    <a href="/blog/tags/引导/" style="font-size: 17.72539935540429px;" class="tag-cloud-link">引导</a>
     
-    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 8.444721720745612px;" class="tag-cloud-link">MarkdownPad2安装</a>
+    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 9.907699426006069px;" class="tag-cloud-link">MarkdownPad2安装</a>
     
-    <a href="/blog/tags/Gitbook/" style="font-size: 11.550166150956322px;" class="tag-cloud-link">Gitbook</a>
+    <a href="/blog/tags/Gitbook/" style="font-size: 15.277857675225096px;" class="tag-cloud-link">Gitbook</a>
     
-    <a href="/blog/tags/Markdown/" style="font-size: 18.837920881935062px;" class="tag-cloud-link">Markdown</a>
+    <a href="/blog/tags/Markdown/" style="font-size: 15.27322822498174px;" class="tag-cloud-link">Markdown</a>
     
-    <a href="/blog/tags/Markdown-R/" style="font-size: 9.760463857861938px;" class="tag-cloud-link">Markdown + R</a>
+    <a href="/blog/tags/Markdown-R/" style="font-size: 17.075313198260655px;" class="tag-cloud-link">Markdown + R</a>
     
-    <a href="/blog/tags/Markdown语法/" style="font-size: 13.960305125310565px;" class="tag-cloud-link">Markdown语法</a>
+    <a href="/blog/tags/Markdown语法/" style="font-size: 18.05937069559822px;" class="tag-cloud-link">Markdown语法</a>
     
 </div>
                 
