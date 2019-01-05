@@ -137,7 +137,7 @@
                         </li>
                         
                         <li>
-                            <a href="/blog/categories/MarkdownPad/">MarkdownPad</a>
+                            <a href="/blog/categories/git/">git</a>
                         </li>
                         
                         
@@ -162,15 +162,15 @@
                         
                         
                         <li>
-                            <a href="/blog/tags/Markdown-Pandoc/">Markdown+Pandoc</a>
-                        </li>
-                        
-                        <li>
                             <a href="/blog/tags/Gitbook/">Gitbook</a>
                         </li>
                         
                         <li>
                             <a href="/blog/tags/Markdown/">Markdown</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/tags/Markdown-Pandoc/">Markdown+Pandoc</a>
                         </li>
                         
                         
@@ -257,7 +257,7 @@
         </center>
     </div>
     <div class="content-article">
-        <h1 id="使用Git命令把本地项目上传到Github托管"><a href="#使用Git命令把本地项目上传到Github托管" class="headerlink" title="使用Git命令把本地项目上传到Github托管"></a>使用Git命令把本地项目上传到Github托管</h1><h2 id="nbsp-nbsp-nbsp-nbsp-我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下："><a href="#nbsp-nbsp-nbsp-nbsp-我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下：" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下："></a>&nbsp;&nbsp;&nbsp;&nbsp;我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下：</h2><h2 id="（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可"><a href="#（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可" class="headerlink" title="（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可"></a>（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可</h2><h2 id="（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到"><a href="#（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到" class="headerlink" title="（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到"></a>（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到</h2><h2 id="3-然后我在本地有一个项目，名称为News，终端进入我的项目目录"><a href="#3-然后我在本地有一个项目，名称为News，终端进入我的项目目录" class="headerlink" title="(3) 然后我在本地有一个项目，名称为News，终端进入我的项目目录"></a>(3) 然后我在本地有一个项目，名称为News，终端进入我的项目目录</h2><h2 id="4-执行命令：git-init"><a href="#4-执行命令：git-init" class="headerlink" title="(4) 执行命令：git init"></a>(4) 执行命令：<code>git init</code></h2><h2 id="该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个-git的隐藏文件。"><a href="#该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个-git的隐藏文件。" class="headerlink" title="该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个.git的隐藏文件。"></a>该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个.git的隐藏文件。</h2><h2 id="5-执行命令：git-add"><a href="#5-执行命令：git-add" class="headerlink" title="(5) 执行命令：git add ."></a>(5) 执行命令：<code>git add .</code></h2><h2 id="注意该命令后面有一个“-”-小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示"><a href="#注意该命令后面有一个“-”-小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示" class="headerlink" title="注意该命令后面有一个“.”,小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示"></a>注意该命令后面有一个“.”,小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示</h2><h2 id="6-执行命令：git-status"><a href="#6-执行命令：git-status" class="headerlink" title="(6) 执行命令：git status"></a>(6) 执行命令：<code>git status</code></h2><h2 id="该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）"><a href="#该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）" class="headerlink" title="该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）"></a>该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）</h2><h2 id="7-执行命令：git-commit-m-quot-这里是注释。。。-quot"><a href="#7-执行命令：git-commit-m-quot-这里是注释。。。-quot" class="headerlink" title="(7) 执行命令：git commit -m &quot;这里是注释。。。&quot;"></a>(7) 执行命令：<code>git commit -m &quot;这里是注释。。。&quot;</code></h2><h2 id="该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git-commit-m-quot-Initial-commit-quot"><a href="#该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git-commit-m-quot-Initial-commit-quot" class="headerlink" title="该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git commit -m &quot;Initial commit&quot;"></a>该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。<code>git commit -m &quot;Initial commit&quot;</code></h2><h2 id="8-执行命令：git-remote-add-origin-https-github-com-username-repository-git或git-remote-add-origin-git-github-com-username-repository-git"><a href="#8-执行命令：git-remote-add-origin-https-github-com-username-repository-git或git-remote-add-origin-git-github-com-username-repository-git" class="headerlink" title="(8) 执行命令：git remote add origin https://github.com/username/repository.git或git remote add origin git@github.com:username/repository.git"></a>(8) 执行命令：<code>git remote add origin https://github.com/username/repository.git</code>或<code>git remote add origin git@github.com:username/repository.git</code></h2><h2 id="该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果"><a href="#该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果" class="headerlink" title="该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果"></a>该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果</h2><h2 id="9-执行命令：git-pull-origin-master"><a href="#9-执行命令：git-pull-origin-master" class="headerlink" title="(9) 执行命令：git pull origin master"></a>(9) 执行命令：<code>git pull origin master</code></h2><h2 id="该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。"><a href="#该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。" class="headerlink" title="该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。"></a>该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。</h2><h2 id="10-执行命令：git-push-u-origin-master"><a href="#10-执行命令：git-push-u-origin-master" class="headerlink" title="(10) 执行命令：git push -u origin master"></a>(10) 执行命令：<code>git push -u origin master</code></h2><h2 id="这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。"><a href="#这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。" class="headerlink" title="这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。"></a>这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。</h2><h2 id="初次提交是上面的命令，多次为git-push-origin-master"><a href="#初次提交是上面的命令，多次为git-push-origin-master" class="headerlink" title="初次提交是上面的命令，多次为git push origin master"></a>初次提交是上面的命令，多次为<code>git push origin master</code></h2>
+        <h1 id="使用Git命令把本地项目上传到Github托管"><a href="#使用Git命令把本地项目上传到Github托管" class="headerlink" title="使用Git命令把本地项目上传到Github托管"></a>使用Git命令把本地项目上传到Github托管</h1><h2 id="nbsp-nbsp-nbsp-nbsp-我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下："><a href="#nbsp-nbsp-nbsp-nbsp-我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下：" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下："></a>&nbsp;&nbsp;&nbsp;&nbsp;我在这篇文章中将会详细实现如何把一个你在本地写好的项目（或者正在写的项目）上传到Github进行托管或者多人合作。具体步骤如下：</h2><h2 id="（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可"><a href="#（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可" class="headerlink" title="（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可"></a>（1）首先在Github上新建一个repository，我命名为NewsClient，其他的根据自己的需求填写即可</h2><h2 id="（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到"><a href="#（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到" class="headerlink" title="（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到"></a>（2）创建完成后，注意到右下角的项目URL，复制一下，以后会用到</h2><h2 id="3-然后我在本地有一个项目，名称为News，终端进入我的项目目录"><a href="#3-然后我在本地有一个项目，名称为News，终端进入我的项目目录" class="headerlink" title="(3) 然后我在本地有一个项目，名称为News，终端进入我的项目目录"></a>(3) 然后我在本地有一个项目，名称为News，终端进入我的项目目录</h2><h2 id="4-执行命令：git-init"><a href="#4-执行命令：git-init" class="headerlink" title="(4) 执行命令：git init"></a>(4) 执行命令：git init</h2><h2 id="该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个-git的隐藏文件。"><a href="#该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个-git的隐藏文件。" class="headerlink" title="该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个.git的隐藏文件。"></a>该命令是在你的项目目录下初始化一个repository，执行成功后，会在你的目录下生成一个.git的隐藏文件。</h2><h2 id="5-执行命令：git-add"><a href="#5-执行命令：git-add" class="headerlink" title="(5) 执行命令：git add ."></a>(5) 执行命令：git add .</h2><h2 id="注意该命令后面有一个“-”-小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示"><a href="#注意该命令后面有一个“-”-小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示" class="headerlink" title="注意该命令后面有一个“.”,小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示"></a>注意该命令后面有一个“.”,小点。表示把该目录下的所有文件加入到本地暂存区中。执行成功后不会有任何提示</h2><h2 id="6-执行命令：git-status"><a href="#6-执行命令：git-status" class="headerlink" title="(6) 执行命令：git status"></a>(6) 执行命令：git status</h2><h2 id="该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）"><a href="#该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）" class="headerlink" title="该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）"></a>该命令会把你本地工作区和暂存区的版本进行比较，查看当前的状态。我下面的状态是已经把所有文件加入到了暂存区中，但是还没有提交到本地历史区。（可跳过）</h2><h2 id="7-执行命令：git-commit-m-“这里是注释。。。”"><a href="#7-执行命令：git-commit-m-“这里是注释。。。”" class="headerlink" title="(7) 执行命令：git commit -m “这里是注释。。。”"></a>(7) 执行命令：git commit -m “这里是注释。。。”</h2><h2 id="该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git-commit-m-“Initial-commit”"><a href="#该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git-commit-m-“Initial-commit”" class="headerlink" title="该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git commit -m “Initial commit”"></a>该命令会把本地暂存区中的文件提交到本地历史区，注意只有在本地历史区中的内容才能提交到github。执行该命令后，我们所有的文件都只是在本地。没有github任何关系。git commit -m “Initial commit”</h2><h2 id="8-执行命令：git-remote-add-origin-https-github-com-username-repository-git"><a href="#8-执行命令：git-remote-add-origin-https-github-com-username-repository-git" class="headerlink" title="(8) 执行命令：git remote add origin https://github.com/username/repository.git"></a>(8) 执行命令：git remote add origin <a href="https://github.com/username/repository.git" target="_blank" rel="noopener">https://github.com/username/repository.git</a></h2><h2 id="git-remote-add-origin-git-github-com-username-repository-git"><a href="#git-remote-add-origin-git-github-com-username-repository-git" class="headerlink" title="git remote add origin git@github.com:username/repository.git"></a>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:username/repository.git</h2><h2 id="该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果"><a href="#该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果" class="headerlink" title="该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果"></a>该命令是把本地历史区中的文件添加到github服务器的暂存区中。这一步是本地和远程服务器建立联系的一步。执行成功后不会显示任何结果</h2><h2 id="9-执行命令：git-pull-origin-master"><a href="#9-执行命令：git-pull-origin-master" class="headerlink" title="(9) 执行命令：git pull origin master"></a>(9) 执行命令：git pull origin master</h2><h2 id="该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。"><a href="#该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。" class="headerlink" title="该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。"></a>该命令是先把github上的文件拉下来，注意在每次提交之前要首先进行pull，这是防止冲突。</h2><h2 id="10-执行命令：git-push-u-origin-master"><a href="#10-执行命令：git-push-u-origin-master" class="headerlink" title="(10) 执行命令：git push -u origin master"></a>(10) 执行命令：git push -u origin master</h2><h2 id="这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。"><a href="#这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。" class="headerlink" title="这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。"></a>这一步是真正向github提交，执行完成后，github上的repository就有和你本地一样的代码文件了。</h2><h2 id="初次提交是上面的命令，多次为git-push-origin-master"><a href="#初次提交是上面的命令，多次为git-push-origin-master" class="headerlink" title="初次提交是上面的命令，多次为git push origin master"></a>初次提交是上面的命令，多次为git push origin master</h2>
     </div>
 </article>
 
@@ -392,13 +392,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/blog/2019/01/05/13cff3c5/">Markdown + Pandoc</a>
+                    <a href="/blog/2019/01/05/5bef2f89/">Gitbook制作电子书</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/blog/2019/01/05/5bef2f89/">Gitbook制作电子书</a>
+                    <a href="/blog/2019/01/05/13cff3c5/">Markdown + Pandoc</a>
                 </span>
             </li>
             
@@ -410,13 +410,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/blog/2019/01/05/671ebdfb/">MarkdownPad2安装与破解</a>
+                    <a href="/blog/2019/01/05/fb31f1f7/">git命令使用</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/blog/2019/01/02/b916a8dc/">环境变量</a>
+                    <a href="/blog/2019/01/05/671ebdfb/">MarkdownPad2安装与破解</a>
                 </span>
             </li>
             
@@ -428,13 +428,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/blog/2019/01/05/fb31f1f7/">git命令使用</a>
+                    <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                    <a href="/blog/2019/01/02/b916a8dc/">环境变量</a>
                 </span>
             </li>
             
@@ -479,27 +479,27 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 14.701639263592945px;" class="tag-cloud-link">Markdown+Pandoc</a>
+    <a href="/blog/tags/Gitbook/" style="font-size: 8.542276915030559px;" class="tag-cloud-link">Gitbook</a>
     
-    <a href="/blog/tags/Gitbook/" style="font-size: 16.450601109730137px;" class="tag-cloud-link">Gitbook</a>
+    <a href="/blog/tags/Markdown/" style="font-size: 14.297621252983793px;" class="tag-cloud-link">Markdown</a>
     
-    <a href="/blog/tags/Markdown/" style="font-size: 12.27086812315473px;" class="tag-cloud-link">Markdown</a>
+    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 19.050687452564063px;" class="tag-cloud-link">Markdown+Pandoc</a>
     
-    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 13.068001349438656px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
+    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 9.265712563614072px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
     
-    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 16.91661219875187px;" class="tag-cloud-link">MarkdownPad2安装</a>
+    <a href="/blog/tags/git/" style="font-size: 19.713456963005655px;" class="tag-cloud-link">git</a>
     
-    <a href="/blog/tags/环境变量/" style="font-size: 16.929374328468846px;" class="tag-cloud-link">环境变量</a>
+    <a href="/blog/tags/命令/" style="font-size: 12.435015442749394px;" class="tag-cloud-link">命令</a>
     
-    <a href="/blog/tags/引导/" style="font-size: 15.134181600309375px;" class="tag-cloud-link">引导</a>
+    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 12.291033805363217px;" class="tag-cloud-link">MarkdownPad2安装</a>
     
-    <a href="/blog/tags/git/" style="font-size: 14.838747793339088px;" class="tag-cloud-link">git</a>
+    <a href="/blog/tags/引导/" style="font-size: 14.881854782664039px;" class="tag-cloud-link">引导</a>
     
-    <a href="/blog/tags/命令/" style="font-size: 10.93628461070492px;" class="tag-cloud-link">命令</a>
+    <a href="/blog/tags/环境变量/" style="font-size: 17.479739873266944px;" class="tag-cloud-link">环境变量</a>
     
-    <a href="/blog/tags/Markdown-R/" style="font-size: 13.852880025199958px;" class="tag-cloud-link">Markdown + R</a>
+    <a href="/blog/tags/Markdown-R/" style="font-size: 9.155863480763582px;" class="tag-cloud-link">Markdown + R</a>
     
-    <a href="/blog/tags/Markdown语法/" style="font-size: 12.35615903036298px;" class="tag-cloud-link">Markdown语法</a>
+    <a href="/blog/tags/Markdown语法/" style="font-size: 10.21437185058658px;" class="tag-cloud-link">Markdown语法</a>
     
 </div>
                 
