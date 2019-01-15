@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="point">
+    
+    
+    
+    
+    
+    
+    <title>proxifier注册码以及配合shadowsocks上网 | Point</title>
+    <link href="”https://Fookdies301.github.io/blog“" rel="”prefetch”">
+
+    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+<link rel="stylesheet" href="/blog/css/aos.css">
+<link rel="stylesheet" href="/blog/css/style.css">
+    <script src="/blog/js/jquery.min.js"></script>
+    <script src="/blog/js/bootstrap.min.js"></script>
+    <script src="/blog/js/aos.js"></script>
+    <script src="/blog/js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="/blog/js/highslide/highslide.css">
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/blog/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/blog/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+</head></html>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="https://Fookdies301.github.io/blog" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/blog/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/blog/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/blog/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/blog/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse" aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://Fookdies301.github.io/blog">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">Point</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/blog/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/blog/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/blog/categories/Markdown/">Markdown</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/categories/开始/">开始</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/categories/hexo/">hexo</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/blog/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/blog/tags/Markdown-Pandoc/">Markdown+Pandoc</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/tags/引导/">引导</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/tags/MarkdownPad2在线报错/">MarkdownPad2在线报错</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/blog/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/blog/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://Fookdies301.github.io/blog">Point</a>
+        >
+        <span>proxifier注册码以及配合shadowsocks上网</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/blog/2019/01/15/6ae0d0de/">proxifier注册码以及配合shadowsocks上网</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/proxifier注册码以及配合shadowsocks上网/">proxifier注册码以及配合shadowsocks上网</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2019-01-15
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/blog/2019/01/15/6ae0d0de/">proxifier注册码以及配合shadowsocks上网</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2019-01-15
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/blog/tags/proxifier注册码以及配合shadowsocks上网/">proxifier注册码以及配合shadowsocks上网</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="proxifier注册码以及配合shadowsocks上网"><a href="#proxifier注册码以及配合shadowsocks上网" class="headerlink" title="proxifier注册码以及配合shadowsocks上网"></a>proxifier注册码以及配合shadowsocks上网</h1><hr>
+<h2 id="由于shadowsocks使用的是sockets5代理，一般情况下只有浏览器支持，可以实现科学上网。但很多用户希望自己的应用软件，像outlook或游戏之类的软件也实现科学上网。这就需要proxifier的配合。"><a href="#由于shadowsocks使用的是sockets5代理，一般情况下只有浏览器支持，可以实现科学上网。但很多用户希望自己的应用软件，像outlook或游戏之类的软件也实现科学上网。这就需要proxifier的配合。" class="headerlink" title="由于shadowsocks使用的是sockets5代理，一般情况下只有浏览器支持，可以实现科学上网。但很多用户希望自己的应用软件，像outlook或游戏之类的软件也实现科学上网。这就需要proxifier的配合。"></a>由于shadowsocks使用的是sockets5代理，一般情况下只有浏览器支持，可以实现科学上网。但很多用户希望自己的应用软件，像outlook或游戏之类的软件也实现科学上网。这就需要proxifier的配合。</h2><hr>
+<h2><br>软件可以在官网下载，<a href="https://www.proxifier.com" target="_blank" rel="noopener">https://www.proxifier.com</a><br>或，<a href="http://www.onlinedown.net/soft/971579.htm" target="_blank" rel="noopener">http://www.onlinedown.net/soft/971579.htm</a><br></h2>
+
+<hr>
+<h1 id="Proxifier基本简介"><a href="#Proxifier基本简介" class="headerlink" title="Proxifier基本简介"></a>Proxifier基本简介</h1><h2><br>　　Proxifier 是一款功能非常强大的socks5客户端，支持64位系统，支持Xp，Vista，Win7，支持socks4，socks5，http代理协议，支持TCP，UDP协议，可以指定端口，指定IP，指定程序等运行模式，兼容性非常好。<br><h2><br>　　Proxifier 解决了这些问题和所有限制，让您有机会不受任何限制使用你喜爱的软件。<br><h2><br>　　此外，它让你获得了额外的网络安全控制，创建代理隧道，并添加使用更多网络功能的权力。<br></h2>
+
+<h1 id="Proxifier功能介绍"><a href="#Proxifier功能介绍" class="headerlink" title="Proxifier功能介绍"></a>Proxifier功能介绍</h1><h2><br>　　1、Proxifier 绕过防火墙的限制。<br><h2><br>　　2、灵活的代理规则，对于主机名和应用程序名称可使用通配符。<br><h2><br>　　3、通过隐藏您的 IP 地址的获得安全隐私。<br><h2><br>　　4、查看当前网络活动的实时信息(连接,主机,时间,带宽使用等)。<br><h2><br>　　5、Proxifier 维护日志文件和流量转储。<br><h2><br>　　6、获得详细的网络错误报告。<br></h2>
+
+<h1><br>Proxifier安装教程<br></h1>
+
+<h2><br>1.在本站下载好Proxifier 数据包后，直接解压用鼠标双击打开进入安装向导，点击下一步<br><br><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/c48e6b5533de83dbc804f9ca9d4037e8.jpg" alt=""><br><br><h2><br>2.选择安装位置，默认路径为“C:Program Files (x86)Proxifier”<br><h2><br>3.在创建桌面快捷方式前面勾上，不然等软件安装好后在你的电脑桌面找不到Proxifier 软件哦<br><h2><br>4.等待安装完成即可<br></h2>
+
+<p><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/4ab2ba58b0304fbc79f4ceb58b602728.jpg" alt=""></p>
+<h1><br>Proxifier使用方法<br></h1><br>***<br><br><h2><br>一、设置代理<br>1、在安装Proxifier；<br><h2><br>2、在Proxifier的“配置文件”菜单上，单击“代理服务器”选项；<br><h2><br>3、在弹出的“代理服务器”对话框中，单击“添加”按钮；<br><h2><br>4、在弹出的“代理服务器”对话框中，输入代理服务器的IP地址和SOCKS端口，选中“SOCKS版本5”单选按钮，再单击“确定”按钮；<br><br><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/23634d8be3e0558167371778ca733175.jpg" alt=""><br><br><h2><br>5、在Proxifier “代理服务器”对话框中，单击“检查”按钮；<br><h2><br>6、在弹出“代理检查器”对话框中，将显示测试信息。<br></h2><br><br><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/0de3f4ab1078377f6a3a267e88006523.jpg" alt=""><br><br><h1><br>二、代理规则<br><h1><br>1、在Proxifier的“配置文件”菜单上，单击“代理规则”选项；<br><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/064cf732d43cd8e621f4aa32336b2702.jpg" alt=""><br><br></h1>
+
+<h2 id="此软件为收费软件，这里提供两个注册码-软件分为Standard-Edition和Portable-Edition版本，注册码不通用，注册用户名任意。"><a href="#此软件为收费软件，这里提供两个注册码-软件分为Standard-Edition和Portable-Edition版本，注册码不通用，注册用户名任意。" class="headerlink" title="此软件为收费软件，这里提供两个注册码, 软件分为Standard Edition和Portable Edition版本，注册码不通用，注册用户名任意。"></a>此软件为收费软件，这里提供两个注册码, 软件分为Standard Edition和Portable Edition版本，注册码不通用，注册用户名任意。</h2><p></p><h1><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L6Z8A-XY2J4-BTZ3P-ZZ7DF-A2Q9C（Portable Edition）</span><br><span class="line"><span class="number">5</span>EZ8G-C3WL5-B56YG-SCXM9<span class="number">-6</span>QZAP（Standard Edition）</span><br><span class="line">P427L<span class="number">-9</span>Y552<span class="number">-5433E-8</span>DSR3<span class="number">-58</span>Z68（MAC）</span><br></pre></td></tr></table></figure><p></p>
+<hr>
+<p>或者：</p>
+<p>用户名：<a href="http://www.3322.cc" target="_blank" rel="noopener">www.3322.cc</a></p>
+<p>注册码（秘钥）：（任选其一）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>EZ8G-C3WL5-B56YG-SCXM9<span class="number">-6</span>QZAP</span><br><span class="line">G3ZC7<span class="number">-7</span>YGPY-FZD3A-FMNF9-ENTJB</span><br><span class="line">YTZGN-FYT53-J253L-ZQZS4-YLBN9</span><br></pre></td></tr></table></figure>
+<p></p></h1><p></p>
+<hr>
+<h2 id="打开软件，首先配置代理服务器。"><a href="#打开软件，首先配置代理服务器。" class="headerlink" title="打开软件，首先配置代理服务器。"></a>打开软件，首先配置代理服务器。</h2><p><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/6512bd43d9caa6e02c990b0a82652dca.png" alt=""></p>
+<h2 id="如下图，添加地址127-0-0-1，以及shadowsocks里配置的本地端口，默认为1080，选择socks-version-5"><a href="#如下图，添加地址127-0-0-1，以及shadowsocks里配置的本地端口，默认为1080，选择socks-version-5" class="headerlink" title="如下图，添加地址127.0.0.1，以及shadowsocks里配置的本地端口，默认为1080，选择socks version 5"></a>如下图，添加地址127.0.0.1，以及shadowsocks里配置的本地端口，默认为1080，选择socks version 5</h2><p><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/c20ad4d76fe97759aa27a0c99bff6710.png" alt=""></p>
+<h2 id="配置好后，点击测试，如果显示下图的绿色文字，则表示配置正确。"><a href="#配置好后，点击测试，如果显示下图的绿色文字，则表示配置正确。" class="headerlink" title="配置好后，点击测试，如果显示下图的绿色文字，则表示配置正确。"></a>配置好后，点击测试，如果显示下图的绿色文字，则表示配置正确。</h2><p><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/c51ce410c124a10e0db5e4b97fc2af39.png" alt=""></p>
+<h2 id="接下来就要添加规则，来确定哪些软件是走代理的，哪些不用"><a href="#接下来就要添加规则，来确定哪些软件是走代理的，哪些不用" class="headerlink" title="接下来就要添加规则，来确定哪些软件是走代理的，哪些不用"></a>接下来就要添加规则，来确定哪些软件是走代理的，哪些不用</h2><p><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/aab3238922bcc25a6f606eb525ffdc56.png" alt=""></p>
+<h2 id="按如图所示的添加，这里有个default规则，如果default旁边的action里边选择的时proxy-socks5…则本机所有软件都会走代理。一般default会选direct，然后把你需要走代理的软件选成proxy-socks5…"><a href="#按如图所示的添加，这里有个default规则，如果default旁边的action里边选择的时proxy-socks5…则本机所有软件都会走代理。一般default会选direct，然后把你需要走代理的软件选成proxy-socks5…" class="headerlink" title="按如图所示的添加，这里有个default规则，如果default旁边的action里边选择的时proxy socks5…则本机所有软件都会走代理。一般default会选direct，然后把你需要走代理的软件选成proxy socks5…"></a>按如图所示的添加，这里有个default规则，如果default旁边的action里边选择的时proxy socks5…则本机所有软件都会走代理。一般default会选direct，然后把你需要走代理的软件选成proxy socks5…</h2><p><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/9bf31c7ff062936a96d3c8bd1f8f2ff3.png" alt=""></p>
+<h2 id="最后在首页就能看到你各个软件的情况。"><a href="#最后在首页就能看到你各个软件的情况。" class="headerlink" title="最后在首页就能看到你各个软件的情况。"></a>最后在首页就能看到你各个软件的情况。</h2><p><img src="https://raw.githubusercontent.com/Fookdies301/tuc/master/03/c74d97b01eae257e44aa9d5bade97baf.png" alt=""></p>
+</h1></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2>
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get" action="/blog/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            point
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/blog/imgs/avatar.jpg" width="140" height="140" alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/15/6ae0d0de/">proxifier注册码以及配合shadowsocks上网</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/08/502b664d/">heroku部署应用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/13cff3c5/">Markdown + Pandoc</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/f5780708/">Markdown + R</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/5bef2f89/">Gitbook制作电子书</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/7894e390/">Markdown 基本语法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/fb31f1f7/">git命令使用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/671ebdfb/">MarkdownPad2安装与破解</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/515db3f0/">New Document</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/3fd15368/">MarkdownPad2 Github在线报错</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/13cff3c5/">Markdown + Pandoc</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/515db3f0/">New Document</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/3fd15368/">MarkdownPad2 Github在线报错</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/fb31f1f7/">git命令使用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/08/502b664d/">heroku部署应用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/02/4a17b156/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/02/b916a8dc/">环境变量</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/5bef2f89/">Gitbook制作电子书</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/f5780708/">Markdown + R</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/blog/2019/01/05/7894e390/">Markdown 基本语法</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/blog/2019/01/15/6ae0d0de/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/blog/2019/01/15/6ae0d0de/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/blog/2019/01/15/6ae0d0de/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/blog/tags/Markdown-Pandoc/" style="font-size: 8.450507091696327px;" class="tag-cloud-link">Markdown+Pandoc</a>
+    
+    <a href="/blog/tags/引导/" style="font-size: 13.985767169174883px;" class="tag-cloud-link">引导</a>
+    
+    <a href="/blog/tags/MarkdownPad2在线报错/" style="font-size: 9.464817890179923px;" class="tag-cloud-link">MarkdownPad2在线报错</a>
+    
+    <a href="/blog/tags/git/" style="font-size: 9.129210447826107px;" class="tag-cloud-link">git</a>
+    
+    <a href="/blog/tags/命令/" style="font-size: 13.75814414439347px;" class="tag-cloud-link">命令</a>
+    
+    <a href="/blog/tags/MarkdownPad2安装/" style="font-size: 11.485275131821247px;" class="tag-cloud-link">MarkdownPad2安装</a>
+    
+    <a href="/blog/tags/heroku/" style="font-size: 11.0798154819933px;" class="tag-cloud-link">heroku</a>
+    
+    <a href="/blog/tags/变量/" style="font-size: 11.693669580779769px;" class="tag-cloud-link">变量</a>
+    
+    <a href="/blog/tags/proxifier注册码以及配合shadowsocks上网/" style="font-size: 13.935940879623232px;" class="tag-cloud-link">proxifier注册码以及配合shadowsocks上网</a>
+    
+    <a href="/blog/tags/环境变量/" style="font-size: 13.134301269788502px;" class="tag-cloud-link">环境变量</a>
+    
+    <a href="/blog/tags/Gitbook/" style="font-size: 16.422787562014157px;" class="tag-cloud-link">Gitbook</a>
+    
+    <a href="/blog/tags/Markdown/" style="font-size: 15.809398343884052px;" class="tag-cloud-link">Markdown</a>
+    
+    <a href="/blog/tags/Markdown-R/" style="font-size: 18.945259663106732px;" class="tag-cloud-link">Markdown + R</a>
+    
+    <a href="/blog/tags/Markdown语法/" style="font-size: 14.847867661815688px;" class="tag-cloud-link">Markdown语法</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+    </li>
+    
+    <li>
+        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+    </li>
+    
+    <li>
+        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/Fookdies301/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 point Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+<script src="/blog/js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/blog/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+<script src="/blog/js/hs.js"></script>
+<script src="/blog/js/blog.js"></script>
+
+<script src="/blog/js/oni.js"></script>
+
+
+
+</html>
